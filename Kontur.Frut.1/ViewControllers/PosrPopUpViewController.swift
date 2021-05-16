@@ -39,7 +39,7 @@ class PosrPopUpViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction func Clear(_ sender: UIButton) {
-        filter = ThePosr()
+        filter.Name = defName
         completion?()
         dismiss(animated: true)
     }

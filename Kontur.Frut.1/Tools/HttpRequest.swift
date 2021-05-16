@@ -7,6 +7,7 @@
 //
 
 import Foundation
+let ApiUrlString = "https://frutwebapi.svr.vc/api/values"
 
 func SetProcent(oid: Int, fin: String, val: Double) {
     let body: [String: Any] =
@@ -33,7 +34,7 @@ func SetValue(oid: Int, fin: String, val: Bool)
 
 func Post(body: [String: Any])
 {
-    let api_url = "https://frutwebapi.svr.vc/api/values"
+    let api_url = ApiUrlString
     let url = URL(string: api_url)!
     var request = URLRequest(url: url)
 
@@ -69,7 +70,7 @@ func FilterToUrlString(_ f: Filter) -> String {
     df.dateFormat = "yyyyMMdd"
     let from = df.string(from: f.ByDate.DateFrom)
     let to = df.string(from: f.ByDate.DateTo)
-    url = "https://frutwebapi.svr.vc/api/values?From=" + from + "&To=" + to
+    url = ApiUrlString + "?From=" + from + "&To=" + to
     
     return url
 }

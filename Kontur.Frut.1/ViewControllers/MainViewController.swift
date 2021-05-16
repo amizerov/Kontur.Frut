@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    var login = Login()
+    
     private var ListOfPosr = [ThePosr()]
     private var ListOfFirm = [TheFirm()]
     
@@ -20,6 +22,7 @@ class MainViewController: UIViewController {
     let searchController = UISearchController()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         // Регистрация кастомного вью для ячейки таблицы
@@ -89,9 +92,29 @@ class MainViewController: UIViewController {
             vc?.filter = self.filter.ByPosr
             vc?.ListOfPosr = self.ListOfPosr
             vc?.completion = {
-                self.arRows =
-                    self.arRows.filter{ $0.Posred == self.filter.ByPosr.Name}
-                self.tbvOpla.reloadData()
+                if self.filter.ByPosr.Name == defName {
+                    self.LoadDataFromServer()
+                }
+                else {
+                    self.arRows =
+                        self.arRows.filter{ $0.Posred == self.filter.ByPosr.Name }
+                    self.tbvOpla.reloadData()
+                }
+            }
+        }
+        else if segue.destination is FirmPopUpViewController {
+            let vc = segue.destination as? FirmPopUpViewController
+            vc?.filter = self.filter.ByFirm
+            vc?.ListOfFirm = self.ListOfFirm
+            vc?.completion = {
+                if self.filter.ByFirm.Name == defName {
+                    self.LoadDataFromServer()
+                }
+                else {
+                    self.arRows =
+                        self.arRows.filter{ $0.Organy == self.filter.ByFirm.Name }
+                    self.tbvOpla.reloadData()
+                }
             }
         }
     }
@@ -111,29 +134,6 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate
             let r = arRows[indexPath.row]
             
             cell!.FillData(arRows[indexPath.row])
-            
-            let df = DateFormatter()
-            df.dateFormat = "dd.MM.yyyy HH:mm"
-            cell!.lblDatePP.text = df.string(from: r.DTC)
-            cell!.lblOrgany.text = r.Organy
-            cell!.lblSummPP.text = "Сумма: \(r.SummPP)"
-            cell!.lblPosred.text = r.Posred
-            
-            // Если выдано авансом, но оплата не пришла,
-            // то ячейка выделяется красным
-            if r.IsPaied && r.IsVidan && !r.IsReced {
-                cell!.alpha = 2
-                cell!.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
-            }
-            else {
-                cell!.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            }
-            
-            cell!.lbIsOplach.backgroundColor = r.IsPaied ? #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-            cell!.lbIsPoluch.backgroundColor = r.IsReced ? #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-            cell!.lbIsVidano.backgroundColor = r.IsVidan ? #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-            
-            cell!.lblProcent.text = "\(r.PenyPr)%"
             
             let posr = ThePosr()
             posr.Name = r.Posred

@@ -12,6 +12,7 @@
 		230F81EF263C58FC00F2E925 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230F81ED263C58FC00F2E925 /* TableViewCell.xib */; };
 		230F81F32640023E00F2E925 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F81F22640023C00F2E925 /* HttpRequest.swift */; };
 		2367793B263978B30046CA60 /* StructRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367793A263978B30046CA60 /* StructRow.swift */; };
+		23805D4F26502D67002299F0 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23805D4E26502D67002299F0 /* StartVC.swift */; };
 		23819C982647DB1A006FF334 /* DatePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C972647DB1A006FF334 /* DatePopupViewController.swift */; };
 		23819C9A26480482006FF334 /* StructFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9926480481006FF334 /* StructFilter.swift */; };
 		23819C9C26494018006FF334 /* PosrPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9B26494018006FF334 /* PosrPopUpViewController.swift */; };
@@ -22,6 +23,8 @@
 		23AF2ED42635A3850065035F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2ED22635A3850065035F /* Main.storyboard */; };
 		23AF2ED62635A38B0065035F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2ED52635A38B0065035F /* Assets.xcassets */; };
 		23AF2ED92635A38B0065035F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2ED72635A38B0065035F /* LaunchScreen.storyboard */; };
+		23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */; };
+		23F3CA3D264FC02600DC2A96 /* StructLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3C264FC02600DC2A96 /* StructLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,7 @@
 		230F81ED263C58FC00F2E925 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		230F81F22640023C00F2E925 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		2367793A263978B30046CA60 /* StructRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructRow.swift; sourceTree = "<group>"; };
+		23805D4E26502D67002299F0 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		23819C972647DB1A006FF334 /* DatePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopupViewController.swift; sourceTree = "<group>"; };
 		23819C9926480481006FF334 /* StructFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructFilter.swift; sourceTree = "<group>"; };
 		23819C9B26494018006FF334 /* PosrPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosrPopUpViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		23AF2ED52635A38B0065035F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23AF2ED82635A38B0065035F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23AF2EDA2635A38B0065035F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		23F3CA3C264FC02600DC2A96 /* StructLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,30 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		23805D4C26502755002299F0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23805D4E26502D67002299F0 /* StartVC.swift */,
+				23AF2ED02635A3850065035F /* MainViewController.swift */,
+				230F81E8263BE33D00F2E925 /* DetailsViewController.swift */,
+				23819C972647DB1A006FF334 /* DatePopupViewController.swift */,
+				23819C9B26494018006FF334 /* PosrPopUpViewController.swift */,
+				23819C9D2649402F006FF334 /* FirmPopUpViewController.swift */,
+				23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		23805D4D26502869002299F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2367793A263978B30046CA60 /* StructRow.swift */,
+				23819C9926480481006FF334 /* StructFilter.swift */,
+				23F3CA3C264FC02600DC2A96 /* StructLogin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		23AF2EC02635A3840065035F = {
 			isa = PBXGroup;
 			children = (
@@ -82,22 +112,17 @@
 		23AF2ECB2635A3850065035F /* Kontur.Frut.1 */ = {
 			isa = PBXGroup;
 			children = (
+				23AF2ED52635A38B0065035F /* Assets.xcassets */,
+				23AF2ED22635A3850065035F /* Main.storyboard */,
+				230F81EC263C58FC00F2E925 /* TableViewCell.swift */,
+				230F81ED263C58FC00F2E925 /* TableViewCell.xib */,
+				23805D4D26502869002299F0 /* Models */,
+				23805D4C26502755002299F0 /* ViewControllers */,
 				230F81F1264001E700F2E925 /* Tools */,
 				23AF2ECC2635A3850065035F /* AppDelegate.swift */,
 				23AF2ECE2635A3850065035F /* SceneDelegate.swift */,
-				23AF2ED02635A3850065035F /* MainViewController.swift */,
-				23AF2ED22635A3850065035F /* Main.storyboard */,
-				23AF2ED52635A38B0065035F /* Assets.xcassets */,
 				23AF2ED72635A38B0065035F /* LaunchScreen.storyboard */,
 				23AF2EDA2635A38B0065035F /* Info.plist */,
-				2367793A263978B30046CA60 /* StructRow.swift */,
-				230F81E8263BE33D00F2E925 /* DetailsViewController.swift */,
-				230F81EC263C58FC00F2E925 /* TableViewCell.swift */,
-				230F81ED263C58FC00F2E925 /* TableViewCell.xib */,
-				23819C972647DB1A006FF334 /* DatePopupViewController.swift */,
-				23819C9926480481006FF334 /* StructFilter.swift */,
-				23819C9B26494018006FF334 /* PosrPopUpViewController.swift */,
-				23819C9D2649402F006FF334 /* FirmPopUpViewController.swift */,
 			);
 			path = Kontur.Frut.1;
 			sourceTree = "<group>";
@@ -174,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */,
 				23AF2ED12635A3850065035F /* MainViewController.swift in Sources */,
 				23819C982647DB1A006FF334 /* DatePopupViewController.swift in Sources */,
 				23AF2ECD2635A3850065035F /* AppDelegate.swift in Sources */,
@@ -182,7 +208,9 @@
 				23819C9E2649402F006FF334 /* FirmPopUpViewController.swift in Sources */,
 				23819C9C26494018006FF334 /* PosrPopUpViewController.swift in Sources */,
 				230F81EE263C58FC00F2E925 /* TableViewCell.swift in Sources */,
+				23F3CA3D264FC02600DC2A96 /* StructLogin.swift in Sources */,
 				2367793B263978B30046CA60 /* StructRow.swift in Sources */,
+				23805D4F26502D67002299F0 /* StartVC.swift in Sources */,
 				230F81F32640023E00F2E925 /* HttpRequest.swift in Sources */,
 				230F81E9263BE33D00F2E925 /* DetailsViewController.swift in Sources */,
 			);

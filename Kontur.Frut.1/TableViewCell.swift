@@ -23,6 +23,28 @@ class TableViewCell: UITableViewCell {
     
     public func FillData(_ r: RowData) {
         
+        let df = DateFormatter()
+        df.dateFormat = "dd.MM.yyyy HH:mm"
+        lblDatePP.text = df.string(from: r.DTC)
+        lblOrgany.text = r.Organy
+        lblSummPP.text = "Сумма: \(r.SummPP)"
+        lblPosred.text = r.Posred
+        
+        // Если выдано авансом, но оплата не пришла,
+        // то ячейка выделяется красным
+        if r.IsPaied && r.IsVidan && !r.IsReced {
+            alpha = 2
+            backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        }
+        else {
+            backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        }
+        
+        lbIsOplach.backgroundColor = r.IsPaied ? #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        lbIsPoluch.backgroundColor = r.IsReced ? #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        lbIsVidano.backgroundColor = r.IsVidan ? #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
+        lblProcent.text = "\(r.PenyPr)%"
     }
     
     override func awakeFromNib() {
