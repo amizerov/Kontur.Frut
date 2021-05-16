@@ -25,7 +25,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var swIsPoluch: UISwitch!
     @IBOutlet weak var swIsVidano: UISwitch!
     
-    var tableViewController: MainViewController?
+    var tableViewController: MainVС?
     var theRow = RowData()
     
     override func viewDidLoad() {

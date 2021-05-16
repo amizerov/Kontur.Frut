@@ -23,8 +23,9 @@ class StartVC: UIViewController {
                 if let login = vc?.login {
                     if login.IsIn {
                         if let mvc = self.storyboard?
-                            .instantiateViewController(identifier: "MainViewController") as? MainViewController
+                            .instantiateViewController(identifier: "MainVС") as? MainVС
                         {
+                            mvc.login = login
                             self.navigationController?.pushViewController(mvc, animated: true)
                         }
                     }

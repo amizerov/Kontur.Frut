@@ -19,7 +19,7 @@
 		23819C9E2649402F006FF334 /* FirmPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9D2649402F006FF334 /* FirmPopUpViewController.swift */; };
 		23AF2ECD2635A3850065035F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ECC2635A3850065035F /* AppDelegate.swift */; };
 		23AF2ECF2635A3850065035F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ECE2635A3850065035F /* SceneDelegate.swift */; };
-		23AF2ED12635A3850065035F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ED02635A3850065035F /* MainViewController.swift */; };
+		23AF2ED12635A3850065035F /* MainVС.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ED02635A3850065035F /* MainVС.swift */; };
 		23AF2ED42635A3850065035F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2ED22635A3850065035F /* Main.storyboard */; };
 		23AF2ED62635A38B0065035F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2ED52635A38B0065035F /* Assets.xcassets */; };
 		23AF2ED92635A38B0065035F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2ED72635A38B0065035F /* LaunchScreen.storyboard */; };
@@ -41,7 +41,7 @@
 		23AF2EC92635A3850065035F /* Kontur.Frut.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kontur.Frut.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23AF2ECC2635A3850065035F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23AF2ECE2635A3850065035F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23AF2ED02635A3850065035F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		23AF2ED02635A3850065035F /* MainVС.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVС.swift"; sourceTree = "<group>"; };
 		23AF2ED32635A3850065035F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23AF2ED52635A38B0065035F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23AF2ED82635A38B0065035F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				23805D4E26502D67002299F0 /* StartVC.swift */,
-				23AF2ED02635A3850065035F /* MainViewController.swift */,
+				23AF2ED02635A3850065035F /* MainVС.swift */,
 				230F81E8263BE33D00F2E925 /* DetailsViewController.swift */,
 				23819C972647DB1A006FF334 /* DatePopupViewController.swift */,
 				23819C9B26494018006FF334 /* PosrPopUpViewController.swift */,
@@ -200,7 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */,
-				23AF2ED12635A3850065035F /* MainViewController.swift in Sources */,
+				23AF2ED12635A3850065035F /* MainVС.swift in Sources */,
 				23819C982647DB1A006FF334 /* DatePopupViewController.swift in Sources */,
 				23AF2ECD2635A3850065035F /* AppDelegate.swift in Sources */,
 				23AF2ECF2635A3850065035F /* SceneDelegate.swift in Sources */,

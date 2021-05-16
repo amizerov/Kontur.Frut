@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
+class MainVС: UIViewController {
 
     var login = Login()
     
@@ -120,7 +120,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate
+extension MainVС: UITableViewDataSource, UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arRows.count
