@@ -346,6 +346,8 @@ namespace am.BL
 
         public static bool CheckDB()
 		{
+			if (LastError.Length > 0) return false;
+
 			DB.Connection con = new DB.Connection();
 			try
 			{

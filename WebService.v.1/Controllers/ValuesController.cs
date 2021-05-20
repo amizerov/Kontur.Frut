@@ -44,22 +44,7 @@ namespace WebService.v._1.Controllers
 
             G.db_exec($"OplUpd_{fin} {oid}, {val}, '{usr}'");
         }
-        /*public void Post([FromBody] CRecieved v)
-        {
-            int oid = v.Oplata_ID;
-            int val = v.IsRecieved ? 1 : 0;
-            string usr = v.usr;
 
-            G.db_exec($"OplUpd_IsRecieved {oid}, {val}, '{usr}'");
-        }
-        public void Post([FromBody] CVidano v)
-        {
-            int oid = v.Oplata_ID;
-            int val = v.IsVidano ? 1 : 0;
-            string usr = v.usr;
-
-            G.db_exec($"OplUpd_IsVidano {oid}, {val}, '{usr}'");
-        }*/
         // PUT api/values/5
         public void Put(int id, [FromBody] string value)
         {
