@@ -10,6 +10,10 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var txtLogin: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    let com = RestApiClient()
     public var login = Login()
     public var completion: (() -> ())?
     
@@ -21,9 +25,28 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func btnLoginClick(_ sender: UIButton) {
-        login.IsIn = true
-        completion?()
-        dismiss(animated: true)
+        
+        com.DoLogin(lgn: txtLogin.text!, pwd: txtPassword.text!)
+        com.completion = { d in
+            
+            self.login.Load(from: d)
+
+            if self.login.IsIn {
+                DispatchQueue.main.async
+                {
+                    self.completion?()
+                    self.dismiss(animated: true)
+                }
+            }
+            else {
+                self.txtLogin.text = ""
+                self.txtPassword.text = ""
+            }
+        }
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     override func viewDidLoad() {
