@@ -94,8 +94,9 @@ class MainVC: UIViewController {
                 self.LoadDataFromServer()
             }
         }
-        else if segue.destination is PosrPopUpViewController {
-            let vc = segue.destination as? PosrPopUpViewController
+        else
+        if segue.destination is PosrPopUpVC {
+            let vc = segue.destination as? PosrPopUpVC
             vc?.filter = self.filter.ByPosr
             vc?.ListOfPosr = self.ListOfPosr
             vc?.completion = {
@@ -109,8 +110,9 @@ class MainVC: UIViewController {
                 }
             }
         }
-        else if segue.destination is FirmPopUpViewController {
-            let vc = segue.destination as? FirmPopUpViewController
+        else
+        if segue.destination is FirmPopUpVC {
+            let vc = segue.destination as? FirmPopUpVC
             vc?.filter = self.filter.ByFirm
             vc?.ListOfFirm = self.ListOfFirm
             vc?.completion = {
@@ -140,7 +142,7 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate
         {
             let r = arRows[indexPath.row]
             
-            cell!.FillData(arRows[indexPath.row])
+            cell!.FillData(r)
             
             let posr = ThePosr()
             posr.Name = r.Posred
@@ -164,6 +166,9 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        if login.Role == 0 {
+            return
+        }
         // При нажатии на ячейку таблицы, переходим на экран редактирования
         if let dv = storyboard?
             .instantiateViewController(identifier: "DetailsVC") as? DetailsVC

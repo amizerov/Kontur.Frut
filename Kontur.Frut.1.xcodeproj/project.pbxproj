@@ -15,15 +15,15 @@
 		23805D4F26502D67002299F0 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23805D4E26502D67002299F0 /* StartVC.swift */; };
 		23819C982647DB1A006FF334 /* DatePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C972647DB1A006FF334 /* DatePopupVC.swift */; };
 		23819C9A26480482006FF334 /* StructFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9926480481006FF334 /* StructFilter.swift */; };
-		23819C9C26494018006FF334 /* PosrPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9B26494018006FF334 /* PosrPopUpViewController.swift */; };
-		23819C9E2649402F006FF334 /* FirmPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9D2649402F006FF334 /* FirmPopUpViewController.swift */; };
+		23819C9C26494018006FF334 /* PosrPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9B26494018006FF334 /* PosrPopUpVC.swift */; };
+		23819C9E2649402F006FF334 /* FirmPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9D2649402F006FF334 /* FirmPopUpVC.swift */; };
 		23AF2ECD2635A3850065035F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ECC2635A3850065035F /* AppDelegate.swift */; };
 		23AF2ECF2635A3850065035F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ECE2635A3850065035F /* SceneDelegate.swift */; };
 		23AF2ED12635A3850065035F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ED02635A3850065035F /* MainVC.swift */; };
 		23AF2ED42635A3850065035F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2ED22635A3850065035F /* Main.storyboard */; };
 		23AF2ED62635A38B0065035F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2ED52635A38B0065035F /* Assets.xcassets */; };
 		23AF2ED92635A38B0065035F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AF2ED72635A38B0065035F /* LaunchScreen.storyboard */; };
-		23CCB807265547DE003DC475 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCB806265547DE003DC475 /* LoginRequest.swift */; };
+		23CCB807265547DE003DC475 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCB806265547DE003DC475 /* ApiService.swift */; };
 		23CCB8092656C42A003DC475 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCB8082656C42A003DC475 /* DesignableView.swift */; };
 		23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */; };
 		23F3CA3D264FC02600DC2A96 /* StructLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3C264FC02600DC2A96 /* StructLogin.swift */; };
@@ -38,8 +38,8 @@
 		23805D4E26502D67002299F0 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		23819C972647DB1A006FF334 /* DatePopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopupVC.swift; sourceTree = "<group>"; };
 		23819C9926480481006FF334 /* StructFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructFilter.swift; sourceTree = "<group>"; };
-		23819C9B26494018006FF334 /* PosrPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosrPopUpViewController.swift; sourceTree = "<group>"; };
-		23819C9D2649402F006FF334 /* FirmPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirmPopUpViewController.swift; sourceTree = "<group>"; };
+		23819C9B26494018006FF334 /* PosrPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosrPopUpVC.swift; sourceTree = "<group>"; };
+		23819C9D2649402F006FF334 /* FirmPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirmPopUpVC.swift; sourceTree = "<group>"; };
 		23AF2EC92635A3850065035F /* Kontur.Frut.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kontur.Frut.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23AF2ECC2635A3850065035F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23AF2ECE2635A3850065035F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		23AF2ED52635A38B0065035F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23AF2ED82635A38B0065035F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23AF2EDA2635A38B0065035F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23CCB806265547DE003DC475 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		23CCB806265547DE003DC475 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		23CCB8082656C42A003DC475 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		23F3CA3C264FC02600DC2A96 /* StructLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructLogin.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				230F81F22640023C00F2E925 /* HttpRequest.swift */,
-				23CCB806265547DE003DC475 /* LoginRequest.swift */,
+				23CCB806265547DE003DC475 /* ApiService.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -81,8 +81,8 @@
 				23AF2ED02635A3850065035F /* MainVC.swift */,
 				230F81E8263BE33D00F2E925 /* DetailsVC.swift */,
 				23819C972647DB1A006FF334 /* DatePopupVC.swift */,
-				23819C9B26494018006FF334 /* PosrPopUpViewController.swift */,
-				23819C9D2649402F006FF334 /* FirmPopUpViewController.swift */,
+				23819C9B26494018006FF334 /* PosrPopUpVC.swift */,
+				23819C9D2649402F006FF334 /* FirmPopUpVC.swift */,
 				23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */,
 			);
 			path = ViewControllers;
@@ -208,13 +208,13 @@
 				23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */,
 				23AF2ED12635A3850065035F /* MainVC.swift in Sources */,
 				23819C982647DB1A006FF334 /* DatePopupVC.swift in Sources */,
-				23CCB807265547DE003DC475 /* LoginRequest.swift in Sources */,
+				23CCB807265547DE003DC475 /* ApiService.swift in Sources */,
 				23AF2ECD2635A3850065035F /* AppDelegate.swift in Sources */,
 				23AF2ECF2635A3850065035F /* SceneDelegate.swift in Sources */,
 				23819C9A26480482006FF334 /* StructFilter.swift in Sources */,
-				23819C9E2649402F006FF334 /* FirmPopUpViewController.swift in Sources */,
+				23819C9E2649402F006FF334 /* FirmPopUpVC.swift in Sources */,
 				23CCB8092656C42A003DC475 /* DesignableView.swift in Sources */,
-				23819C9C26494018006FF334 /* PosrPopUpViewController.swift in Sources */,
+				23819C9C26494018006FF334 /* PosrPopUpVC.swift in Sources */,
 				230F81EE263C58FC00F2E925 /* TableViewCell.swift in Sources */,
 				23F3CA3D264FC02600DC2A96 /* StructLogin.swift in Sources */,
 				2367793B263978B30046CA60 /* StructRow.swift in Sources */,
@@ -369,7 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = QQB4FNYPXN;
 				INFOPLIST_FILE = Kontur.Frut.1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -377,7 +377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7;
+				MARKETING_VERSION = 2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "uz.Kontur-Frut-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -391,7 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = QQB4FNYPXN;
 				INFOPLIST_FILE = Kontur.Frut.1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -399,7 +399,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7;
+				MARKETING_VERSION = 2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "uz.Kontur-Frut-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

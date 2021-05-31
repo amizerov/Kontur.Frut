@@ -34,6 +34,7 @@ class DetailsVC: UIViewController {
         super.viewDidLoad()
         
         //if screen height < 500 lblNaznch.Vizible = false
+        login = tableVC?.login
         
         let df = DateFormatter()
         df.dateFormat = "dd/MM/yyyy"
@@ -59,6 +60,12 @@ class DetailsVC: UIViewController {
         swIsOplach.isOn = theRow.IsPaied
         swIsPoluch.isOn = theRow.IsReced
         swIsVidano.isOn = theRow.IsVidan
+        
+        if login?.Role != 1 {
+            swIsOplach.isEnabled = false
+            swIsPoluch.isEnabled = false
+            swIsVidano.isEnabled = false
+        }
     }
     @IBAction func stpProcentChanges(_ sender: UIStepper) {
         lblProcent.text = "\(Int(stpProcent.value)) %"

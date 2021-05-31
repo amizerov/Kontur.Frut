@@ -8,17 +8,17 @@
 
 import Foundation
 
-public class RestApiClient {
+public class ApiService {
     
-    private let LoginUrlString = "https://frutwebapi.svr.vc/api/Login"
+    private let loginUrl = "https://frutwebapi.svr.vc/api/Login"
 
-    public var completion: ((_ d: Data) -> ())?
+    public var loginDone: ((_ loginResult: Data) -> ())?
     
-    public func DoLogin(lgn: String, pwd: String) {
-        if let url = URL(string: LoginUrlString + "?lgn=\(lgn)&pwd=\(pwd)") {
+    public func DoLogin(_ lgn: String, _ pwd: String) {
+        if let url = URL(string: loginUrl + "?lgn=\(lgn)&pwd=\(pwd)") {
            URLSession.shared.dataTask(with: url) { data, response, error in
               if let data = data {
-                self.completion?(data)
+                self.loginDone?(data)
               }
            }.resume()
         }

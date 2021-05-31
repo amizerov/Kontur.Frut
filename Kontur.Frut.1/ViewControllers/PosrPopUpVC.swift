@@ -1,5 +1,5 @@
 //
-//  FirmPopUpViewController.swift
+//  PosrPopUpViewController.swift
 //  Kontur.Frut.1
 //
 //  Created by Andrey Mizerov on 10.05.2021.
@@ -8,27 +8,27 @@
 
 import UIKit
 
-class FirmPopUpViewController: UIViewController {
+class PosrPopUpVC: UIViewController {
 
-    @IBOutlet weak var popUpViewFirm: UIView!
-    @IBOutlet weak var picFirm: UIPickerView!
+    @IBOutlet weak var popUpViewPosr: UIView!
+    @IBOutlet weak var picPosr: UIPickerView!
     @IBOutlet weak var btnCancel: UIButton!
     
     public var completion: (() -> ())?
-    public var filter = TheFirm()
-    public var ListOfFirm = [TheFirm]()
+    public var filter = ThePosr()
+    public var ListOfPosr = [ThePosr]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         btnCancel.layer.cornerRadius = 10
-        popUpViewFirm.layer.cornerRadius = 10
+        popUpViewPosr.layer.cornerRadius = 10
         
-        picFirm.delegate = self
-        picFirm.dataSource = self
+        picPosr.delegate = self
+        picPosr.dataSource = self
         
-        let idxCurrRow = ListOfFirm.firstIndex(where: {$0.Name == filter.Name})
-        picFirm.selectRow(idxCurrRow!, inComponent: 0, animated: true)
+        let idxCurrRow = ListOfPosr.firstIndex(where: {$0.Name == filter.Name})
+        picPosr.selectRow(idxCurrRow!, inComponent: 0, animated: true)
     }
     
     @IBAction func btnCancel_Click(_ sender: UIButton) {
@@ -39,23 +39,23 @@ class FirmPopUpViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction func Clear(_ sender: UIButton) {
-        filter = TheFirm()
+        filter.Name = defName
         completion?()
         dismiss(animated: true)
     }
 }
 
-extension FirmPopUpViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension PosrPopUpVC: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return ListOfFirm.count
+        return ListOfPosr.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        filter.Name = ListOfFirm[row].Name
+        filter.Name = ListOfPosr[row].Name
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -65,9 +65,8 @@ extension FirmPopUpViewController: UIPickerViewDelegate, UIPickerViewDataSource 
             lbl?.font = UIFont(name: "Arial", size: CGFloat(45))
             lbl?.textAlignment = .center
         }
-        lbl?.text = ListOfFirm[row].Name
+        lbl?.text = ListOfPosr[row].Name
         
         return lbl!
     }
 }
-

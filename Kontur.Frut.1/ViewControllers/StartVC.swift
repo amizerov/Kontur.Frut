@@ -23,9 +23,9 @@ class StartVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is LoginVC {
-            let vc = segue.destination as? LoginVC
-            vc?.completion = {
-                if let login = vc?.login {
+            let lvc = segue.destination as? LoginVC
+            lvc?.loginSuccess = {
+                if let login = lvc?.login {
                     if login.IsIn {
                         DispatchQueue.main.async {
                             if let mvc = self.storyboard?

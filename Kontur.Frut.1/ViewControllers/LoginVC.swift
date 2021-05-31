@@ -13,9 +13,9 @@ class LoginVC: UIViewController {
     @IBOutlet weak var txtLogin: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    let com = RestApiClient()
+    let api = ApiService()
     public var login = Login()
-    public var completion: (() -> ())?
+    public var loginSuccess: (() -> ())?
     
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
@@ -26,15 +26,15 @@ class LoginVC: UIViewController {
     
     @IBAction func btnLoginClick(_ sender: UIButton) {
         
-        com.DoLogin(lgn: txtLogin.text!, pwd: txtPassword.text!)
-        com.completion = { d in
+        api.DoLogin(txtLogin.text!, txtPassword.text!)
+        api.loginDone = { loginResult in
             
-            self.login.Load(from: d)
+            self.login.Load(from: loginResult)
 
             if self.login.IsIn {
                 DispatchQueue.main.async
                 {
-                    self.completion?()
+                    self.loginSuccess?()
                     self.dismiss(animated: true)
                 }
             }
