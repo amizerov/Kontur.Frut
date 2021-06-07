@@ -9,7 +9,7 @@ import UIKit
 
 class DetailsVC: UIViewController {
 
-    var login: Login?
+    var login = Login()
     
     @IBOutlet weak var lblHeader: UILabel!
     @IBOutlet weak var lblOrgany: UILabel!
@@ -34,7 +34,7 @@ class DetailsVC: UIViewController {
         super.viewDidLoad()
         
         //if screen height < 500 lblNaznch.Vizible = false
-        login = tableVC?.login
+        login = tableVC!.login
         
         let df = DateFormatter()
         df.dateFormat = "dd/MM/yyyy"
@@ -61,10 +61,11 @@ class DetailsVC: UIViewController {
         swIsPoluch.isOn = theRow.IsReced
         swIsVidano.isOn = theRow.IsVidan
         
-        if login?.Role != 1 {
-            swIsOplach.isEnabled = false
-            swIsPoluch.isEnabled = false
-            swIsVidano.isEnabled = false
+        if login.Role != 1 {
+            //swIsOplach.isEnabled = false
+            //swIsPoluch.isEnabled = false
+            //swIsVidano.isEnabled = false
+            stpProcent.isHidden = true
         }
     }
     @IBAction func stpProcentChanges(_ sender: UIStepper) {
@@ -74,19 +75,19 @@ class DetailsVC: UIViewController {
         lblSumVid.text =
             "Комис: " + String(format: "%.2f", com) + " " +
             "Выдать: " + String(format: "%.2f", vid)
-        SetProcent(oid: theRow.ID, fin: "Procent", val: stpProcent.value)
+        SetProcent(oid: theRow.ID, fin: "Procent", val: stpProcent.value, user: login.Name)
         tableVC?.NeedToReload = true
     }
     @IBAction func IsOplaChanged(_ sender: UISwitch) {
-        SetValue(oid: theRow.ID, fin: "IsPaied", val: sender.isOn)
+        SetValue(oid: theRow.ID, fin: "IsPaied", val: sender.isOn, user: login.Name)
         tableVC?.NeedToReload = true
     }
     @IBAction func IsPoluChanged(_ sender: UISwitch) {
-        SetValue(oid: theRow.ID, fin: "IsRecieved", val: sender.isOn)
+        SetValue(oid: theRow.ID, fin: "IsRecieved", val: sender.isOn, user: login.Name)
         tableVC?.NeedToReload = true
     }
     @IBAction func IsVidaChanged(_ sender: UISwitch) {
-        SetValue(oid: theRow.ID, fin: "IsVidano", val: sender.isOn)
+        SetValue(oid: theRow.ID, fin: "IsVidano", val: sender.isOn, user: login.Name)
         tableVC?.NeedToReload = true
    }
 }

@@ -9,26 +9,26 @@
 import Foundation
 let ApiUrlString = "https://frutwebapi.svr.vc/api/values"
 
-func SetProcent(oid: Int, fin: String, val: Double) {
+func SetProcent(oid: Int, fin: String, val: Double, user: String = "iPhone") {
     let body: [String: Any] =
-        [
-            "Oplata_ID": oid,
-            "FieldName": fin,
-            "IntVal": Int(val),
-            "usr": "iPhone"
-        ]
+    [
+        "Oplata_ID": oid,
+        "FieldName": fin,
+        "IntVal": Int(val),
+        "usr": user
+    ]
     Post(body: body)
 }
 
-func SetValue(oid: Int, fin: String, val: Bool)
+func SetValue(oid: Int, fin: String, val: Bool, user: String = "iPhone")
 {
     let body: [String: Any] =
-        [
-            "Oplata_ID": oid,
-            "FieldName": fin,
-            "BoolVal": val,
-            "usr": "iPhone"
-        ]
+    [
+        "Oplata_ID": oid,
+        "FieldName": fin,
+        "BoolVal": val,
+        "usr": user
+    ]
     Post(body: body)
 }
 

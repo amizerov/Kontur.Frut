@@ -704,11 +704,19 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbO-r9-uCa">
+                                <rect key="frame" x="159" y="633.66666666666663" width="57" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cw1-HK-Zwy"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bbO-r9-uCa" firstAttribute="centerX" secondItem="RuS-Er-dbC" secondAttribute="centerX" id="FhI-00-oqp"/>
+                            <constraint firstItem="cw1-HK-Zwy" firstAttribute="bottom" secondItem="bbO-r9-uCa" secondAttribute="bottom" constant="124" id="S79-Vp-AFJ"/>
                             <constraint firstItem="jIX-KM-SLQ" firstAttribute="centerY" secondItem="RuS-Er-dbC" secondAttribute="centerY" id="n5q-fX-eYg"/>
                             <constraint firstItem="jIX-KM-SLQ" firstAttribute="centerX" secondItem="RuS-Er-dbC" secondAttribute="centerX" id="rgs-al-mnl"/>
                         </constraints>
@@ -717,6 +725,7 @@
                     <connections>
                         <outlet property="btnLogin" destination="ZVS-iw-LuQ" id="fuq-O3-Wln"/>
                         <outlet property="btnProsto" destination="Xss-EQ-N9X" id="yOA-Lh-ZnN"/>
+                        <outlet property="lblVersion" destination="bbO-r9-uCa" id="Upn-3b-coD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUV-qq-0lD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

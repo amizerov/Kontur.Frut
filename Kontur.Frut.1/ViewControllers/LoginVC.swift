@@ -15,7 +15,7 @@ class LoginVC: UIViewController {
     
     let api = ApiService()
     public var login = Login()
-    public var loginSuccess: (() -> ())?
+    public var loginSuccess: ((_ login: Login) -> ())?
     
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
@@ -34,7 +34,7 @@ class LoginVC: UIViewController {
             if self.login.IsIn {
                 DispatchQueue.main.async
                 {
-                    self.loginSuccess?()
+                    self.loginSuccess?(self.login)
                     self.dismiss(animated: true)
                 }
             }
