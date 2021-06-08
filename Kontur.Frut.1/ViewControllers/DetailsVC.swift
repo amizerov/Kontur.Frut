@@ -11,6 +11,8 @@ class DetailsVC: UIViewController {
 
     var login = Login()
     
+    @IBOutlet weak var btnHistory: UIButton!
+    
     @IBOutlet weak var lblHeader: UILabel!
     @IBOutlet weak var lblOrgany: UILabel!
     @IBOutlet weak var lblPosred: UILabel!
@@ -67,6 +69,8 @@ class DetailsVC: UIViewController {
             //swIsVidano.isEnabled = false
             stpProcent.isHidden = true
         }
+    }
+    @IBAction func btnHistory_Click(_ sender: Any) {
     }
     @IBAction func stpProcentChanges(_ sender: UIStepper) {
         lblProcent.text = "\(Int(stpProcent.value)) %"

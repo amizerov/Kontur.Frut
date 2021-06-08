@@ -305,6 +305,34 @@
             </objects>
             <point key="canvasLocation" x="-1431.2" y="475.86206896551727"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="rla-Vt-Cfg">
+            <objects>
+                <tableViewController id="7ee-4W-Azn" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F50-5b-1Uj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5ZS-dw-uyb">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ZS-dw-uyb" id="Fgr-sR-OsA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7ee-4W-Azn" id="e6e-6r-4ik"/>
+                            <outlet property="delegate" destination="7ee-4W-Azn" id="kec-5d-h2u"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3s-Xe-XJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2479" y="-1608"/>
+        </scene>
         <!--DetailsVC-->
         <scene sceneID="Gad-6F-wQr">
             <objects>
@@ -439,6 +467,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXN-NE-8go">
+                                <rect key="frame" x="225" y="44" width="100" height="36"/>
+                                <color key="backgroundColor" red="0.28579413889999999" green="0.56792223450000001" blue="0.60748422150000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3hi-0l-Y07"/>
+                                    <constraint firstAttribute="height" constant="36" id="xVm-pX-La3"/>
+                                </constraints>
+                                <state key="normal" title="   История   "/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnHistory_Click:" destination="wWz-kj-fDW" eventType="touchUpInside" id="Nkb-fx-wlQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zev-dN-fjV"/>
                         <color key="backgroundColor" red="0.74321031569999996" green="0.86411219839999998" blue="0.76597541570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -460,11 +505,13 @@
                             <constraint firstItem="Zev-dN-fjV" firstAttribute="trailing" secondItem="bOd-SB-zIV" secondAttribute="trailing" constant="50" id="Paj-ZC-DDJ"/>
                             <constraint firstItem="Zev-dN-fjV" firstAttribute="bottom" secondItem="VW2-WY-cDn" secondAttribute="bottom" constant="50" id="RZb-Vx-zgA"/>
                             <constraint firstItem="w4S-zb-g8N" firstAttribute="top" secondItem="2jm-jP-txT" secondAttribute="bottom" constant="10" id="T8o-ZO-JAm"/>
+                            <constraint firstItem="Zev-dN-fjV" firstAttribute="trailing" secondItem="QXN-NE-8go" secondAttribute="trailing" constant="50" id="U3P-Th-hop"/>
                             <constraint firstItem="fMN-dP-392" firstAttribute="centerX" secondItem="NKN-S4-MQa" secondAttribute="centerX" id="VmI-HE-ZZn"/>
                             <constraint firstItem="bOd-SB-zIV" firstAttribute="top" secondItem="XBg-ZR-kvO" secondAttribute="bottom" constant="10" id="c7J-ev-quU"/>
                             <constraint firstItem="Mie-sb-YpR" firstAttribute="leading" secondItem="Zev-dN-fjV" secondAttribute="leading" constant="50" id="cd9-Ye-RGq"/>
                             <constraint firstItem="Zev-dN-fjV" firstAttribute="trailing" secondItem="2jm-jP-txT" secondAttribute="trailing" constant="50" id="gJB-uC-Bb6"/>
                             <constraint firstItem="VW2-WY-cDn" firstAttribute="centerX" secondItem="NKN-S4-MQa" secondAttribute="centerX" id="goC-k1-gem"/>
+                            <constraint firstItem="QXN-NE-8go" firstAttribute="top" secondItem="Zev-dN-fjV" secondAttribute="top" id="iHS-Bc-FvL"/>
                             <constraint firstItem="Zev-dN-fjV" firstAttribute="trailing" secondItem="XBg-ZR-kvO" secondAttribute="trailing" constant="50" id="jqp-Vc-9k7"/>
                             <constraint firstItem="VW2-WY-cDn" firstAttribute="top" secondItem="fMN-dP-392" secondAttribute="bottom" constant="20" id="qKc-xe-a4a"/>
                             <constraint firstItem="fMN-dP-392" firstAttribute="top" secondItem="OU7-ZV-eDn" secondAttribute="bottom" constant="20" id="rfG-C8-IcA"/>
@@ -479,6 +526,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btnHistory" destination="QXN-NE-8go" id="lyq-F0-Vd1"/>
                         <outlet property="lblHeader" destination="w4S-zb-g8N" id="kY4-AQ-yNA"/>
                         <outlet property="lblKontra" destination="Kuf-Wn-4k9" id="KSr-KW-u0g"/>
                         <outlet property="lblNaznch" destination="Mie-sb-YpR" id="Dml-ug-esn"/>
@@ -492,11 +540,12 @@
                         <outlet property="swIsOplach" destination="Wfj-qO-bK7" id="l8B-2O-QsI"/>
                         <outlet property="swIsPoluch" destination="2ur-Ds-2VZ" id="szE-AG-cjm"/>
                         <outlet property="swIsVidano" destination="lad-o6-O42" id="bkq-B4-V2o"/>
+                        <segue destination="7ee-4W-Azn" kind="custom" id="tCh-CY-Ls0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FW4-Bu-arj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2478" y="-903"/>
+            <point key="canvasLocation" x="-2479.1999999999998" y="-903.69458128078827"/>
         </scene>
         <!--Date PopupVC-->
         <scene sceneID="dHg-vc-HxX">
