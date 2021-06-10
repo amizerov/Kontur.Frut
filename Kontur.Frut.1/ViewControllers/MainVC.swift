@@ -177,6 +177,7 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate
             dv.tableVC = self
             // и передаем данные по выбранной ячейке
             dv.theRow = arRows[indexPath.row]
+            dv.theRow.LoadHistory()
  
             self.navigationController?.pushViewController(dv, animated: true)
         }

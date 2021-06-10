@@ -11,8 +11,6 @@ class DetailsVC: UIViewController {
 
     var login = Login()
     
-    @IBOutlet weak var btnHistory: UIButton!
-    
     @IBOutlet weak var lblHeader: UILabel!
     @IBOutlet weak var lblOrgany: UILabel!
     @IBOutlet weak var lblPosred: UILabel!
@@ -93,5 +91,12 @@ class DetailsVC: UIViewController {
     @IBAction func IsVidaChanged(_ sender: UISwitch) {
         SetValue(oid: theRow.ID, fin: "IsVidano", val: sender.isOn, user: login.Name)
         tableVC?.NeedToReload = true
-   }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is HistoryTVC {
+            let hvc = segue.destination as? HistoryTVC
+            hvc?.cngs = theRow.Changes
+        }
+    }
 }

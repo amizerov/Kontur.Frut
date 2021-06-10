@@ -26,6 +26,27 @@ class RowData
     /*4*/var IsReced: Bool = false
     /*5*/var IsVidan: Bool = false
 
+    var Changes = [Change]()
+    func LoadHistory() {
+        let api = ApiService()
+        api.GetHistory(ID)
+        api.gotHistory = { data in
+            self.Changes = RowData.LoadChanges(fromData: data)
+        }
+    }
+    static func LoadChanges(fromData d: Data) -> [Change] {
+        var ar = [Change]()
+        let a: [String] = String(data: d, encoding: .utf8)!.components(separatedBy: "},{")
+        if (a.count == 0 || a[0] == "[]") {
+            return ar
+        }
+        for e in a {
+            let r = Change.Load(from: e)
+            ar.append(r)
+        }
+        return ar
+    }
+    
     static func LoadRows(fromData d: Data) -> [RowData] {
         var ar = [RowData]()
         let a: [String] = String(data: d, encoding: .utf8)!.components(separatedBy: "},{")

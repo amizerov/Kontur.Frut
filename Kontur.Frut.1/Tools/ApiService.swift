@@ -11,7 +11,6 @@ import Foundation
 public class ApiService {
     
     private let loginUrl = "https://frutwebapi.svr.vc/api/Login"
-
     public var loginDone: ((_ loginResult: Data) -> ())?
     
     public func DoLogin(_ lgn: String, _ pwd: String) {
@@ -19,6 +18,19 @@ public class ApiService {
            URLSession.shared.dataTask(with: url) { data, response, error in
               if let data = data {
                 self.loginDone?(data)
+              }
+           }.resume()
+        }
+    }
+    
+    private let apiUrl = "https://frutwebapi.svr.vc/api"
+    public var gotHistory: ((_ data: Data) -> ())?
+    
+    public func GetHistory(_ id_oplata: Int) {
+        if let url = URL(string: apiUrl + "/values/\(id_oplata)") {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+              if let data = data {
+                self.gotHistory?(data)
               }
            }.resume()
         }

@@ -28,6 +28,7 @@
 		23CCB8092656C42A003DC475 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCB8082656C42A003DC475 /* DesignableView.swift */; };
 		23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */; };
 		23F3CA3D264FC02600DC2A96 /* StructLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3C264FC02600DC2A96 /* StructLogin.swift */; };
+		23FE4F742670FAB10056EDFA /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FE4F732670FAB10056EDFA /* HistoryTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		23CCB8082656C42A003DC475 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		23F3CA3C264FC02600DC2A96 /* StructLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructLogin.swift; sourceTree = "<group>"; };
+		23FE4F732670FAB10056EDFA /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				23819C9B26494018006FF334 /* PosrPopUpVC.swift */,
 				23819C9D2649402F006FF334 /* FirmPopUpVC.swift */,
 				23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */,
+				23FE4F732670FAB10056EDFA /* HistoryTVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				23819C982647DB1A006FF334 /* DatePopupVC.swift in Sources */,
 				23CCB807265547DE003DC475 /* ApiService.swift in Sources */,
 				23AF2ECD2635A3850065035F /* AppDelegate.swift in Sources */,
+				23FE4F742670FAB10056EDFA /* HistoryTVC.swift in Sources */,
 				23AF2ECF2635A3850065035F /* SceneDelegate.swift in Sources */,
 				23819C9A26480482006FF334 /* StructFilter.swift in Sources */,
 				23819C9E2649402F006FF334 /* FirmPopUpVC.swift in Sources */,
