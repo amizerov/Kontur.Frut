@@ -46,6 +46,7 @@ class StartVC: UIViewController {
             lvc?.loginSuccess = { login in
                 if login.IsIn {
                     DispatchQueue.main.async {
+                        self.showSpiner()
                         if let mvc = self.storyboard?
                             .instantiateViewController(identifier: "MainVC") as? MainVC
                         {
@@ -56,6 +57,9 @@ class StartVC: UIViewController {
                     }
                 }
             }
+        }
+        if segue.destination is MainVC {
+            showSpiner()
         }
     }
     

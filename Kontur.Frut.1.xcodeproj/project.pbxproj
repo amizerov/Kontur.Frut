@@ -29,6 +29,7 @@
 		23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */; };
 		23F3CA3D264FC02600DC2A96 /* StructLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3C264FC02600DC2A96 /* StructLogin.swift */; };
 		23FE4F742670FAB10056EDFA /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FE4F732670FAB10056EDFA /* HistoryTVC.swift */; };
+		23FE4F76267383910056EDFA /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FE4F75267383910056EDFA /* Progress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		23F3CA3C264FC02600DC2A96 /* StructLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructLogin.swift; sourceTree = "<group>"; };
 		23FE4F732670FAB10056EDFA /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
+		23FE4F75267383910056EDFA /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				230F81F22640023C00F2E925 /* HttpRequest.swift */,
 				23CCB806265547DE003DC475 /* ApiService.swift */,
+				23FE4F75267383910056EDFA /* Progress.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23FE4F76267383910056EDFA /* Progress.swift in Sources */,
 				23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */,
 				23AF2ED12635A3850065035F /* MainVC.swift in Sources */,
 				23819C982647DB1A006FF334 /* DatePopupVC.swift in Sources */,
@@ -385,7 +389,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = QQB4FNYPXN;
 				INFOPLIST_FILE = Kontur.Frut.1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -407,7 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = QQB4FNYPXN;
 				INFOPLIST_FILE = Kontur.Frut.1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
