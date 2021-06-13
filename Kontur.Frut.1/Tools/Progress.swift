@@ -2,7 +2,7 @@
 //  Progress.swift
 //  Kontur.Frut.1
 //
-//  Created by Andrey Mizerov on 11.06.2021.
+//  Created by Andrey Mizerov on 12.06.2021.
 //  Copyright © 2021 ООО "Ультра Зум". All rights reserved.
 //
 
@@ -21,6 +21,10 @@ extension UIViewController {
         ai.startAnimating()
         aView?.addSubview(ai)
         self.view.addSubview(aView!)
+        
+        Timer.scheduledTimer(withTimeInterval: 60, repeats: false) { (t) in
+            self.removeSpiner()
+        }
     }
     
     func removeSpiner() {

@@ -70,6 +70,7 @@ class MainVC: UIViewController {
             self.arRows = RowData.LoadRows(fromData: d)
             self.tbvOpla.reloadData()
             self.tbvOpla.refreshControl?.endRefreshing()
+
             self.removeSpiner()
         }
     }
