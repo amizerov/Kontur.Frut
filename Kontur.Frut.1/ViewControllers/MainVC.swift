@@ -128,6 +128,15 @@ class MainVC: UIViewController {
                 }
             }
         }
+        else
+        if segue.destination is NewOplVC {
+            let vc = segue.destination as? NewOplVC
+            let api = ApiService()
+            api.GetPosrList()
+            api.gotPosrList = { data in
+                vc!.PosredLst = PS.LoadPosrLst(fromData: data)
+            }
+        }
     }
 }
 

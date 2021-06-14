@@ -3,15 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DA97636845160450AB8DF56 /* Pods_Kontur_Frut_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AF9F90992FA344E54CF7CC /* Pods_Kontur_Frut_1.framework */; };
 		230F81E9263BE33D00F2E925 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F81E8263BE33D00F2E925 /* DetailsVC.swift */; };
 		230F81EE263C58FC00F2E925 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F81EC263C58FC00F2E925 /* TableViewCell.swift */; };
 		230F81EF263C58FC00F2E925 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230F81ED263C58FC00F2E925 /* TableViewCell.xib */; };
 		230F81F32640023E00F2E925 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F81F22640023C00F2E925 /* HttpRequest.swift */; };
 		2367793B263978B30046CA60 /* StructRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2367793A263978B30046CA60 /* StructRow.swift */; };
+		237E7DD12677567D009FCC07 /* NewOplVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E7DD02677567D009FCC07 /* NewOplVC.swift */; };
 		23805D4F26502D67002299F0 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23805D4E26502D67002299F0 /* StartVC.swift */; };
 		23819C982647DB1A006FF334 /* DatePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C972647DB1A006FF334 /* DatePopupVC.swift */; };
 		23819C9A26480482006FF334 /* StructFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9926480481006FF334 /* StructFilter.swift */; };
@@ -33,11 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13EB02BEC6AD0E0AD07A71FE /* Pods-Kontur.Frut.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kontur.Frut.1.release.xcconfig"; path = "Target Support Files/Pods-Kontur.Frut.1/Pods-Kontur.Frut.1.release.xcconfig"; sourceTree = "<group>"; };
 		230F81E8263BE33D00F2E925 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		230F81EC263C58FC00F2E925 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		230F81ED263C58FC00F2E925 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		230F81F22640023C00F2E925 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		2367793A263978B30046CA60 /* StructRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructRow.swift; sourceTree = "<group>"; };
+		237E7DD02677567D009FCC07 /* NewOplVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOplVC.swift; sourceTree = "<group>"; };
 		23805D4E26502D67002299F0 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		23819C972647DB1A006FF334 /* DatePopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopupVC.swift; sourceTree = "<group>"; };
 		23819C9926480481006FF334 /* StructFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructFilter.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		23F3CA3C264FC02600DC2A96 /* StructLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructLogin.swift; sourceTree = "<group>"; };
 		23FE4F732670FAB10056EDFA /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
 		23FE4F772675076D0056EDFA /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		30AF9F90992FA344E54CF7CC /* Pods_Kontur_Frut_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kontur_Frut_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54749F044CD3957E2B27DCD6 /* Pods-Kontur.Frut.1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kontur.Frut.1.debug.xcconfig"; path = "Target Support Files/Pods-Kontur.Frut.1/Pods-Kontur.Frut.1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA97636845160450AB8DF56 /* Pods_Kontur_Frut_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +99,7 @@
 				23819C9D2649402F006FF334 /* FirmPopUpVC.swift */,
 				23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */,
 				23FE4F732670FAB10056EDFA /* HistoryTVC.swift */,
+				237E7DD02677567D009FCC07 /* NewOplVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -112,6 +120,8 @@
 				23BB1C342664F91D00749964 /* Docs */,
 				23AF2ECB2635A3850065035F /* Kontur.Frut.1 */,
 				23AF2ECA2635A3850065035F /* Products */,
+				932B50939D81BD5D1CBA960F /* Pods */,
+				CBA95E7B5181A1F287096984 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +160,23 @@
 			path = Docs;
 			sourceTree = "<group>";
 		};
+		932B50939D81BD5D1CBA960F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54749F044CD3957E2B27DCD6 /* Pods-Kontur.Frut.1.debug.xcconfig */,
+				13EB02BEC6AD0E0AD07A71FE /* Pods-Kontur.Frut.1.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CBA95E7B5181A1F287096984 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30AF9F90992FA344E54CF7CC /* Pods_Kontur_Frut_1.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23AF2EDD2635A38B0065035F /* Build configuration list for PBXNativeTarget "Kontur.Frut.1" */;
 			buildPhases = (
+				B837260AB9F65C33EE650326 /* [CP] Check Pods Manifest.lock */,
 				23AF2EC52635A3840065035F /* Sources */,
 				23AF2EC62635A3840065035F /* Frameworks */,
 				23AF2EC72635A3840065035F /* Resources */,
+				11F68D3A77CC7B3DDB02C955 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +247,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11F68D3A77CC7B3DDB02C955 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kontur.Frut.1/Pods-Kontur.Frut.1-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kontur.Frut.1/Pods-Kontur.Frut.1-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kontur.Frut.1/Pods-Kontur.Frut.1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B837260AB9F65C33EE650326 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kontur.Frut.1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		23AF2EC52635A3840065035F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -227,6 +298,7 @@
 				23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */,
 				23AF2ED12635A3850065035F /* MainVC.swift in Sources */,
 				23819C982647DB1A006FF334 /* DatePopupVC.swift in Sources */,
+				237E7DD12677567D009FCC07 /* NewOplVC.swift in Sources */,
 				23CCB807265547DE003DC475 /* ApiService.swift in Sources */,
 				23AF2ECD2635A3850065035F /* AppDelegate.swift in Sources */,
 				23FE4F742670FAB10056EDFA /* HistoryTVC.swift in Sources */,
@@ -385,6 +457,7 @@
 		};
 		23AF2EDE2635A38B0065035F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54749F044CD3957E2B27DCD6 /* Pods-Kontur.Frut.1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -407,6 +480,7 @@
 		};
 		23AF2EDF2635A38B0065035F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13EB02BEC6AD0E0AD07A71FE /* Pods-Kontur.Frut.1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

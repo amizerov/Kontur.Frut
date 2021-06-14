@@ -10,6 +10,10 @@ import Foundation
 
 public class ApiService {
     
+    init() {
+        
+    }
+    
     private let loginUrl = "https://frutwebapi.svr.vc/api/Login"
     public var loginDone: ((_ loginResult: Data) -> ())?
     
@@ -35,4 +39,18 @@ public class ApiService {
            }.resume()
         }
     }
+    
+    public var gotPosrList: ((_ data: Data) -> ())?
+    public func GetPosrList() {
+        if let url = URL(string: apiUrl + "/posr") {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+              if let data = data {
+                self.gotPosrList?(data)
+              }
+           }.resume()
+        }
+    }
+    
+
+    
 }

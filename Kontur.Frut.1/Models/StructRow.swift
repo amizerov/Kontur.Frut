@@ -7,6 +7,26 @@
 
 import Foundation
 
+public struct Posred: Codable {
+    var ID = 0
+    var Name = ""
+    var Procent = 0
+}
+
+public class PS {
+    public static func LoadPosrLst(fromData: Data) -> [Posred] {
+        let decoder = JSONDecoder()
+        do {
+            let ps = try decoder.decode([Posred].self, from: fromData)
+            return ps
+        } catch {
+            debugPrint("Error parsing")
+        }
+
+        return [Posred]()
+    }
+}
+
 class RowData
 {
     /*0*/var ID: Int = 0
