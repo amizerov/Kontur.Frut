@@ -14,8 +14,8 @@
             filePath = "Kontur.Frut.1/Models/StructRow.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "LoadHistory()"
             landmarkType = "7">
          </BreakpointContent>

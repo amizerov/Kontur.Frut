@@ -11,11 +11,12 @@ import DropDown
 
 class NewOplVC: UIViewController {
 
-    var PosredLst = [Posred]()
-    var PosredStr = [String]()
+    var ps = Posreds()
+    var fs = Firmas()
+    var cs = Contras()
     
     @IBOutlet weak var txtPosr: UITextField!
-    let dropDown = DropDown()
+    let ddPosred = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,11 @@ class NewOplVC: UIViewController {
     }
     
     @IBAction func tapChoosePosr(_ sender: UIButton) {
-        dropDown.dataSource = PosredStr//4
-        dropDown.anchorView = txtPosr //5
-        dropDown.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
-        dropDown.show() //7
-        dropDown.selectionAction = { [weak self] (index: Int, item: String) in //8
+        ddPosred.dataSource = ps.ds
+        ddPosred.anchorView = txtPosr
+        ddPosred.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height)
+        ddPosred.show()
+        ddPosred.selectionAction = { [weak self] (index: Int, item: String) in //8
             guard let _ = self else { return }
             self?.txtPosr.text = item
         }

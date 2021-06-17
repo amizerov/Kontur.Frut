@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0DA97636845160450AB8DF56 /* Pods_Kontur_Frut_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AF9F90992FA344E54CF7CC /* Pods_Kontur_Frut_1.framework */; };
+		230D39F5267B93720058148B /* Posrednik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D39F4267B93710058148B /* Posrednik.swift */; };
+		230D39F9267B9E850058148B /* MyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D39F8267B9E850058148B /* MyArray.swift */; };
+		230D39FC267BA85D0058148B /* Contragent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D39FA267BA85D0058148B /* Contragent.swift */; };
+		230D39FD267BA85D0058148B /* Firma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D39FB267BA85D0058148B /* Firma.swift */; };
 		230F81E9263BE33D00F2E925 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F81E8263BE33D00F2E925 /* DetailsVC.swift */; };
 		230F81EE263C58FC00F2E925 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F81EC263C58FC00F2E925 /* TableViewCell.swift */; };
 		230F81EF263C58FC00F2E925 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230F81ED263C58FC00F2E925 /* TableViewCell.xib */; };
@@ -36,6 +40,10 @@
 
 /* Begin PBXFileReference section */
 		13EB02BEC6AD0E0AD07A71FE /* Pods-Kontur.Frut.1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kontur.Frut.1.release.xcconfig"; path = "Target Support Files/Pods-Kontur.Frut.1/Pods-Kontur.Frut.1.release.xcconfig"; sourceTree = "<group>"; };
+		230D39F4267B93710058148B /* Posrednik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posrednik.swift; sourceTree = "<group>"; };
+		230D39F8267B9E850058148B /* MyArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArray.swift; sourceTree = "<group>"; };
+		230D39FA267BA85D0058148B /* Contragent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contragent.swift; sourceTree = "<group>"; };
+		230D39FB267BA85D0058148B /* Firma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firma.swift; sourceTree = "<group>"; };
 		230F81E8263BE33D00F2E925 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		230F81EC263C58FC00F2E925 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		230F81ED263C58FC00F2E925 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -81,6 +89,7 @@
 		230F81F1264001E700F2E925 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				230D39F8267B9E850058148B /* MyArray.swift */,
 				230F81F22640023C00F2E925 /* HttpRequest.swift */,
 				23CCB806265547DE003DC475 /* ApiService.swift */,
 				23FE4F772675076D0056EDFA /* Progress.swift */,
@@ -107,9 +116,12 @@
 		23805D4D26502869002299F0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				230D39FA267BA85D0058148B /* Contragent.swift */,
+				230D39FB267BA85D0058148B /* Firma.swift */,
 				2367793A263978B30046CA60 /* StructRow.swift */,
 				23819C9926480481006FF334 /* StructFilter.swift */,
 				23F3CA3C264FC02600DC2A96 /* StructLogin.swift */,
+				230D39F4267B93710058148B /* Posrednik.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,7 +310,9 @@
 				23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */,
 				23AF2ED12635A3850065035F /* MainVC.swift in Sources */,
 				23819C982647DB1A006FF334 /* DatePopupVC.swift in Sources */,
+				230D39F9267B9E850058148B /* MyArray.swift in Sources */,
 				237E7DD12677567D009FCC07 /* NewOplVC.swift in Sources */,
+				230D39F5267B93720058148B /* Posrednik.swift in Sources */,
 				23CCB807265547DE003DC475 /* ApiService.swift in Sources */,
 				23AF2ECD2635A3850065035F /* AppDelegate.swift in Sources */,
 				23FE4F742670FAB10056EDFA /* HistoryTVC.swift in Sources */,
@@ -312,7 +326,9 @@
 				2367793B263978B30046CA60 /* StructRow.swift in Sources */,
 				23805D4F26502D67002299F0 /* StartVC.swift in Sources */,
 				230F81F32640023E00F2E925 /* HttpRequest.swift in Sources */,
+				230D39FC267BA85D0058148B /* Contragent.swift in Sources */,
 				230F81E9263BE33D00F2E925 /* DetailsVC.swift in Sources */,
+				230D39FD267BA85D0058148B /* Firma.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

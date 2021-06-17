@@ -50,7 +50,27 @@ public class ApiService {
            }.resume()
         }
     }
-    
+ 
+    public var gotFirmaList: ((_ data: Data) -> ())?
+    public func GetFirmaList() {
+        if let url = URL(string: apiUrl + "/Firma") {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+              if let data = data {
+                self.gotFirmaList?(data)
+              }
+           }.resume()
+        }
+    }
 
-    
+    public var gotContraList: ((_ data: Data) -> ())?
+    public func GetContraList() {
+        if let url = URL(string: apiUrl + "/Contra") {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+              if let data = data {
+                self.gotContraList?(data)
+              }
+           }.resume()
+        }
+    }
+
 }

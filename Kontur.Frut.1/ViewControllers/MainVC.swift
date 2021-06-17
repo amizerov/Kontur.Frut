@@ -134,7 +134,15 @@ class MainVC: UIViewController {
             let api = ApiService()
             api.GetPosrList()
             api.gotPosrList = { data in
-                vc!.PosredLst = PS.LoadPosrLst(fromData: data)
+                vc!.ps = Posreds(fromData: data)
+            }
+            api.GetFirmaList()
+            api.gotFirmaList = { data in
+                vc!.fs = Firmas(fromData: data)
+            }
+            api.GetContraList()
+            api.gotContraList = { data in
+                vc!.cs = Contras(fromData: data)
             }
         }
     }
