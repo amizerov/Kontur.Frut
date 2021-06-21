@@ -23,8 +23,14 @@ class Posreds {
                 str.append(a.Name)
             }
         } catch {
-            debugPrint("Error parsing")
+            debugPrint("Error parsing Posred")
         }
+    }
+    
+    func id(_ Name: String) -> Int {
+        var v: Int
+        v = arr.first(where: {$0.Name == Name})!.ID
+        return v
     }
 }
 

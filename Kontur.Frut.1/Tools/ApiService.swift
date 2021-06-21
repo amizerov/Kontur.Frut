@@ -72,5 +72,16 @@ public class ApiService {
            }.resume()
         }
     }
+    
+    public var gotNaznachList: ((_ data: Data) -> ())?
+    public func GetNaznachList() {
+        if let url = URL(string: apiUrl + "/Naznach") {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+              if let data = data {
+                self.gotNaznachList?(data)
+              }
+           }.resume()
+        }
+    }
 
 }

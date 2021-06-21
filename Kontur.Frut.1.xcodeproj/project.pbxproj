@@ -12,6 +12,8 @@
 		230D39F9267B9E850058148B /* MyArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D39F8267B9E850058148B /* MyArray.swift */; };
 		230D39FC267BA85D0058148B /* Contragent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D39FA267BA85D0058148B /* Contragent.swift */; };
 		230D39FD267BA85D0058148B /* Firma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D39FB267BA85D0058148B /* Firma.swift */; };
+		230D39FF267BAC3D0058148B /* Naznach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D39FE267BAC3D0058148B /* Naznach.swift */; };
+		230D3A01268081840058148B /* Oplata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D3A00268081840058148B /* Oplata.swift */; };
 		230F81E9263BE33D00F2E925 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F81E8263BE33D00F2E925 /* DetailsVC.swift */; };
 		230F81EE263C58FC00F2E925 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230F81EC263C58FC00F2E925 /* TableViewCell.swift */; };
 		230F81EF263C58FC00F2E925 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230F81ED263C58FC00F2E925 /* TableViewCell.xib */; };
@@ -44,6 +46,8 @@
 		230D39F8267B9E850058148B /* MyArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArray.swift; sourceTree = "<group>"; };
 		230D39FA267BA85D0058148B /* Contragent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contragent.swift; sourceTree = "<group>"; };
 		230D39FB267BA85D0058148B /* Firma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firma.swift; sourceTree = "<group>"; };
+		230D39FE267BAC3D0058148B /* Naznach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Naznach.swift; sourceTree = "<group>"; };
+		230D3A00268081840058148B /* Oplata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oplata.swift; sourceTree = "<group>"; };
 		230F81E8263BE33D00F2E925 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		230F81EC263C58FC00F2E925 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		230F81ED263C58FC00F2E925 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -116,12 +120,14 @@
 		23805D4D26502869002299F0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				230D39FE267BAC3D0058148B /* Naznach.swift */,
 				230D39FA267BA85D0058148B /* Contragent.swift */,
 				230D39FB267BA85D0058148B /* Firma.swift */,
 				2367793A263978B30046CA60 /* StructRow.swift */,
 				23819C9926480481006FF334 /* StructFilter.swift */,
 				23F3CA3C264FC02600DC2A96 /* StructLogin.swift */,
 				230D39F4267B93710058148B /* Posrednik.swift */,
+				230D3A00268081840058148B /* Oplata.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,10 +331,12 @@
 				23F3CA3D264FC02600DC2A96 /* StructLogin.swift in Sources */,
 				2367793B263978B30046CA60 /* StructRow.swift in Sources */,
 				23805D4F26502D67002299F0 /* StartVC.swift in Sources */,
+				230D39FF267BAC3D0058148B /* Naznach.swift in Sources */,
 				230F81F32640023E00F2E925 /* HttpRequest.swift in Sources */,
 				230D39FC267BA85D0058148B /* Contragent.swift in Sources */,
 				230F81E9263BE33D00F2E925 /* DetailsVC.swift in Sources */,
 				230D39FD267BA85D0058148B /* Firma.swift in Sources */,
+				230D3A01268081840058148B /* Oplata.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

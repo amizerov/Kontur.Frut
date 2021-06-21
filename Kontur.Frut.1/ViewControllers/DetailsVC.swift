@@ -68,8 +68,7 @@ class DetailsVC: UIViewController {
             stpProcent.isHidden = true
         }
     }
-    @IBAction func btnHistory_Click(_ sender: Any) {
-    }
+
     @IBAction func stpProcentChanges(_ sender: UIStepper) {
         lblProcent.text = "\(Int(stpProcent.value)) %"
         let com = theRow.SummPP * stpProcent.value / 100

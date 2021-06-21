@@ -9,6 +9,7 @@ import UIKit
 
 class MainVC: UIViewController {
 
+    let api = ApiService()
     var login = Login()
     
     private var ListOfPosr = [ThePosr()]
@@ -131,18 +132,23 @@ class MainVC: UIViewController {
         else
         if segue.destination is NewOplVC {
             let vc = segue.destination as? NewOplVC
-            let api = ApiService()
+            
             api.GetPosrList()
+            api.GetFirmaList()
+            api.GetContraList()
+            api.GetNaznachList()
+            
             api.gotPosrList = { data in
                 vc!.ps = Posreds(fromData: data)
             }
-            api.GetFirmaList()
             api.gotFirmaList = { data in
                 vc!.fs = Firmas(fromData: data)
             }
-            api.GetContraList()
             api.gotContraList = { data in
                 vc!.cs = Contras(fromData: data)
+            }
+            api.gotNaznachList = { data in
+                vc!.ns = Naznachs(fromData: data)
             }
         }
     }
