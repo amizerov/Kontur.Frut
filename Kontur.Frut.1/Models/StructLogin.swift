@@ -27,6 +27,8 @@ class Login {
             IsIn = true
             Name = GetStrValue(a[1])
             Role = GetIntValue(a[3])
+            
+            CurrentUser = Name
         }
     }
     func GetStrValue(_ s: String) -> String

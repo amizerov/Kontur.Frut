@@ -7,6 +7,8 @@
 //
 
 import Foundation
+
+var CurrentUser = "none"
 let ApiUrlString = "https://frutwebapi.svr.vc/api/values"
 
 func SetProcent(oid: Int, fin: String, val: Double, user: String = "iPhone") {

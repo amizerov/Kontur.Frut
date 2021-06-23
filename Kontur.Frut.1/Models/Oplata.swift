@@ -16,7 +16,7 @@ class Oplata {
     var contra = 0
     var naznac = 0
     var procen = 0
-    var datepp = ""
+    var datepp = ""    
 
     init(_ n:Int,_ p:Int,_ s:Double,_ f:Int,_ c:Int,_ a:Int,_ r:Int,_ d:String) {
         nomerp = n
@@ -29,6 +29,18 @@ class Oplata {
         datepp = d
     }
     func Save() {
-        
+        let body: [String: Any] =
+        [
+            "nomerp": nomerp,
+            "posred": posred,
+            "summap": summap,
+            "firmap": firmap,
+            "contra": contra,
+            "naznac": naznac,
+            "procen": procen,
+            "datepp": datepp,
+            "usr": CurrentUser
+        ]
+        Post(body: body)
     }
 }
