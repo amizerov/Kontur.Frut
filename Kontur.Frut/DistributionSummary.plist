@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kontur.Frut.1.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>AFEC496BF0F75CAA54DFF6880EB7E2F624D96BDD</string>
+				<key>dateExpires</key>
+				<string>30.04.2022</string>
+				<key>type</key>
+				<string>Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>QQB4FNYPXN.uz.Kontur-Frut-1</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>QQB4FNYPXN</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>QQB4FNYPXN.uz.Kontur-Frut-1</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>Kontur.Frut.1.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>b141cf23-ca22-49fe-9a11-b9556c59fc58</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: uz.Kontur-Frut-1</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>QQB4FNYPXN</string>
+				<key>name</key>
+				<string>Ultrazoom, LLC</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

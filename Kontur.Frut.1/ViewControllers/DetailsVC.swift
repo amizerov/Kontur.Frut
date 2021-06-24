@@ -27,14 +27,14 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var swIsPoluch: UISwitch!
     @IBOutlet weak var swIsVidano: UISwitch!
     
-    var tableVC: MainVC?
+    var mainVC: MainVC?
     var theRow = RowData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //if screen height < 500 lblNaznch.Vizible = false
-        login = tableVC!.login
+        login = mainVC!.login
         
         let df = DateFormatter()
         df.dateFormat = "dd/MM/yyyy"
@@ -77,19 +77,19 @@ class DetailsVC: UIViewController {
             "Комис: " + String(format: "%.2f", com) + " " +
             "Выдать: " + String(format: "%.2f", vid)
         SetProcent(oid: theRow.ID, fin: "Procent", val: stpProcent.value, user: login.Name)
-        tableVC?.NeedToReload = true
+        mainVC?.NeedToReload = true
     }
     @IBAction func IsOplaChanged(_ sender: UISwitch) {
         SetValue(oid: theRow.ID, fin: "IsPaied", val: sender.isOn, user: login.Name)
-        tableVC?.NeedToReload = true
+        mainVC?.NeedToReload = true
     }
     @IBAction func IsPoluChanged(_ sender: UISwitch) {
         SetValue(oid: theRow.ID, fin: "IsRecieved", val: sender.isOn, user: login.Name)
-        tableVC?.NeedToReload = true
+        mainVC?.NeedToReload = true
     }
     @IBAction func IsVidaChanged(_ sender: UISwitch) {
         SetValue(oid: theRow.ID, fin: "IsVidano", val: sender.isOn, user: login.Name)
-        tableVC?.NeedToReload = true
+        mainVC?.NeedToReload = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -41,6 +41,9 @@ class Oplata {
             "datepp": datepp,
             "usr": CurrentUser
         ]
+        let s = ApiUrlString
+        ApiUrlString = "https://frutwebapi.svr.vc/api/NewOpla"
         Post(body: body)
+        ApiUrlString = s
     }
 }

@@ -1,0 +1,8 @@
+
+App Thinning Size Report for All Variants of Kontur.Frut.1
+
+Variant: Kontur.Frut.1-892086F5-F90B-4D4B-9B91-4ED0A85513BC.ipa
+Supported variant descriptors: [device: iPhone12,8, os-version: 14.0], [device: iPhone8,4, os-version: 14.0], [device: iPod9,1, os-version: 14.0], [device: iPhone9,1, os-version: 14.0], [device: iPhone9,3, os-version: 14.0], [device: iPhone10,1, os-version: 14.0], [device: iPhone10,4, os-version: 14.0], and [device: iPhone8,1, os-version: 14.0]
+App + On Demand Resources size: 6,1 MB compressed, 7,1 MB uncompressed
+App size: 6,1 MB compressed, 7,1 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed

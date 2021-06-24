@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Oplata.Save():Oplata.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "procen">
+            </PersistentString>
+            <PersistentString
+               value = "summap">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #4 in MainVC.prepare(for:sender:):MainVC.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Posreds.init(fromData:):Posrednik.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "str">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Posreds.init(fromData:):Posrednik.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "str">
+            </PersistentString>
+            <PersistentString
+               value = "arr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NewOplVC.btnSaveClicked(_:):NewOplVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lblProcent.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NewOplVC.tapChooseFirma(_:):NewOplVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fs">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

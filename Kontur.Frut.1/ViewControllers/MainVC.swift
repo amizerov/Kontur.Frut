@@ -199,7 +199,7 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate
             .instantiateViewController(identifier: "DetailsVC") as? DetailsVC
         {
             // передаем в редактор ссылку на главный контроллер
-            dv.tableVC = self
+            dv.mainVC = self
             // и передаем данные по выбранной ячейке
             dv.theRow = arRows[indexPath.row]
             dv.theRow.LoadHistory()

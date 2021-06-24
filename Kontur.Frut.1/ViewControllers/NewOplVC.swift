@@ -103,12 +103,17 @@ class NewOplVC: UIViewController {
         
         let n = Int(txtNomer.text!) ?? 0
         let s = Double(txtSumma.text!) ?? 0
-        let r = Int(lblProcent.text!) ?? 0
+        var proc = lblProcent.text!
+        proc = proc.replacingOccurrences(of: "%", with: "")
+        proc = proc.replacingOccurrences(of: " ", with: "")
+        let r = Int(proc) ?? 0
         let d = dpDatePP.date
         let frmr = DateFormatter()
         frmr.dateFormat = "yyyy-MM-dd"
         
         let opl = Oplata(n,p,s,f,c,a,r,frmr.string(from: d))
         opl.Save()
+        
+        dismiss(animated: true)
     }
 }
