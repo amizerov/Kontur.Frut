@@ -59,6 +59,8 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Only to shut pay order</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 </dict>

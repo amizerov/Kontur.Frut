@@ -3,35 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Oplata.Save():Oplata.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "procen">
-            </PersistentString>
-            <PersistentString
-               value = "summap">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "static RowData.GetIntValue(_:):StructRow.swift">
       </ContextState>
       <ContextState
-         contextName = "closure #4 in MainVC.prepare(for:sender:):MainVC.swift">
+         contextName = "NewOplVC.tapChooseFirma(_:):NewOplVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fs">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "Posreds.init(fromData:):Posrednik.swift">
          <PersistentStrings>
             <PersistentString
                value = "str">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in Posreds.init(fromData:):Posrednik.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "str">
-            </PersistentString>
-            <PersistentString
-               value = "arr">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -44,10 +30,35 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "NewOplVC.tapChooseFirma(_:):NewOplVC.swift">
+         contextName = "closure #4 in MainVC.prepare(for:sender:):MainVC.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NewOplVC.validateFields():NewOplVC.swift">
          <PersistentStrings>
             <PersistentString
-               value = "fs">
+               value = "txtPosr.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Oplata.Save():Oplata.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "procen">
+            </PersistentString>
+            <PersistentString
+               value = "summap">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Posreds.init(fromData:):Posrednik.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "str">
+            </PersistentString>
+            <PersistentString
+               value = "arr">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
