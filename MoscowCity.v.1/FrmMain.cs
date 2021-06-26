@@ -1,4 +1,4 @@
-п»їusing System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,9 +22,9 @@ namespace Frut
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            bsiVersion.Caption = "Р’РµСЂСЃРёСЏ: " + Application.ProductVersion;
-            bsiDatabase.Caption = "Р‘Р°Р·Р°: " + am.DB.DBManager.Instance.Database;
-            bsiUser.Caption = "Р®Р·РµСЂ: " + Environment.UserName;
+            bsiVersion.Caption = "Версия: " + Application.ProductVersion;
+            bsiDatabase.Caption = "База: " + am.DB.DBManager.Instance.Database;
+            bsiUser.Caption = "Юзер: " + Environment.UserName;
 
             deTo.EditValue = DateTime.Now;
             deFrom.EditValue = DateTime.Now.AddDays(-30);
@@ -47,23 +47,23 @@ namespace Frut
             DataTable dt = G.db_select(sql);
             gcMain.DataSource = dt;
 
-            gvMain.Columns["Р”Р°С‚Р°"].Summary.Clear();
-            gvMain.Columns["Р”Р°С‚Р°"].Summary.Add(DevExpress.Data.SummaryItemType.Count);
+            gvMain.Columns["Дата"].Summary.Clear();
+            gvMain.Columns["Дата"].Summary.Add(DevExpress.Data.SummaryItemType.Count);
 
-            gvMain.Columns["РЎСѓРјРјР°"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            gvMain.Columns["РЎСѓРјРјР°"].DisplayFormat.FormatString = "{0:c2}";
-            gvMain.Columns["РЎСѓРјРјР°"].Summary.Clear();
-            gvMain.Columns["РЎСѓРјРјР°"].Summary.Add(DevExpress.Data.SummaryItemType.Sum).DisplayFormat = "{0:c2}";
+            gvMain.Columns["Сумма"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            gvMain.Columns["Сумма"].DisplayFormat.FormatString = "{0:c2}";
+            gvMain.Columns["Сумма"].Summary.Clear();
+            gvMain.Columns["Сумма"].Summary.Add(DevExpress.Data.SummaryItemType.Sum).DisplayFormat = "{0:c2}";
 
-            gvMain.Columns["РЁС‚СЂР°С„"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            gvMain.Columns["РЁС‚СЂР°С„"].DisplayFormat.FormatString = "{0:c2}";
-            gvMain.Columns["РЁС‚СЂР°С„"].Summary.Clear();
-            gvMain.Columns["РЁС‚СЂР°С„"].Summary.Add(DevExpress.Data.SummaryItemType.Sum).DisplayFormat = "{0:c2}";
+            gvMain.Columns["Штраф"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            gvMain.Columns["Штраф"].DisplayFormat.FormatString = "{0:c2}";
+            gvMain.Columns["Штраф"].Summary.Clear();
+            gvMain.Columns["Штраф"].Summary.Add(DevExpress.Data.SummaryItemType.Sum).DisplayFormat = "{0:c2}";
 
-            gvMain.Columns["Р—Р°С‡РёСЃР»РµРЅРѕ"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            gvMain.Columns["Р—Р°С‡РёСЃР»РµРЅРѕ"].DisplayFormat.FormatString = "{0:c2}";
-            gvMain.Columns["Р—Р°С‡РёСЃР»РµРЅРѕ"].Summary.Clear();
-            gvMain.Columns["Р—Р°С‡РёСЃР»РµРЅРѕ"].Summary.Add(DevExpress.Data.SummaryItemType.Sum).DisplayFormat = "{0:c2}";
+            gvMain.Columns["Зачислено"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            gvMain.Columns["Зачислено"].DisplayFormat.FormatString = "{0:c2}";
+            gvMain.Columns["Зачислено"].Summary.Clear();
+            gvMain.Columns["Зачислено"].Summary.Add(DevExpress.Data.SummaryItemType.Sum).DisplayFormat = "{0:c2}";
 
             gvMain.Columns[0].Visible = false;
             gvMain.BestFitColumns(true);

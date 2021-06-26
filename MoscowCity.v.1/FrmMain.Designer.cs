@@ -1,16 +1,16 @@
-п»їnamespace Frut
+namespace Frut
 {
     partial class FrmMain
     {
         /// <summary>
-        /// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
+        /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
+        /// Освободить все используемые ресурсы.
         /// </summary>
-        /// <param name="disposing">РёСЃС‚РёРЅРЅРѕ, РµСЃР»Рё СѓРїСЂР°РІР»СЏРµРјС‹Р№ СЂРµСЃСѓСЂСЃ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СѓРґР°Р»РµРЅ; РёРЅР°С‡Рµ Р»РѕР¶РЅРѕ.</param>
+        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region РљРѕРґ, Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё СЃРѕР·РґР°РЅРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРј С„РѕСЂРј Windows
+        #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
-        /// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
-        /// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
+        /// Требуемый метод для поддержки конструктора — не изменяйте 
+        /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent()
         {
@@ -104,7 +104,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Caption = "Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІСѓСЋ";
+            this.btnAdd.Caption = "Добавить новую";
             this.btnAdd.Id = 1;
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.LargeImage")));
@@ -114,7 +114,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Caption = "РР·РјРµРЅРёС‚СЊ";
+            this.btnEdit.Caption = "Изменить";
             this.btnEdit.Id = 2;
             this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
             this.btnEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.LargeImage")));
@@ -124,7 +124,7 @@
             // 
             // btnDel
             // 
-            this.btnDel.Caption = "РЈРґР°Р»РёС‚СЊ";
+            this.btnDel.Caption = "Удалить";
             this.btnDel.Id = 3;
             this.btnDel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.ImageOptions.Image")));
             this.btnDel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDel.ImageOptions.LargeImage")));
@@ -134,7 +134,7 @@
             // 
             // btnReload
             // 
-            this.btnReload.Caption = "РћР±РЅРѕРІРёС‚СЊ";
+            this.btnReload.Caption = "Обновить";
             this.btnReload.Id = 4;
             this.btnReload.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.ImageOptions.Image")));
             this.btnReload.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnReload.ImageOptions.LargeImage")));
@@ -144,7 +144,7 @@
             // 
             // deFrom
             // 
-            this.deFrom.Caption = "РЎ";
+            this.deFrom.Caption = "С";
             this.deFrom.Edit = this.repositoryItemDateEdit1;
             this.deFrom.EditValue = new System.DateTime(2020, 5, 5, 16, 14, 7, 522);
             this.deFrom.EditWidth = 100;
@@ -164,7 +164,7 @@
             // 
             // deTo
             // 
-            this.deTo.Caption = "РїРѕ";
+            this.deTo.Caption = "по";
             this.deTo.Edit = this.repositoryItemDateEdit2;
             this.deTo.EditValue = new System.DateTime(2020, 5, 5, 16, 14, 23, 775);
             this.deTo.EditWidth = 100;
@@ -183,7 +183,7 @@
             // 
             // bsiVersion
             // 
-            this.bsiVersion.Caption = "Р’РµСЂСЃРёСЏ 1.0.0.1";
+            this.bsiVersion.Caption = "Версия 1.0.0.1";
             this.bsiVersion.Id = 7;
             this.bsiVersion.Name = "bsiVersion";
             // 
@@ -200,7 +200,7 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "Р—Р°РіСЂСѓР·РёС‚СЊ";
+            this.barButtonItem1.Caption = "Загрузить";
             this.barButtonItem1.Id = 10;
             this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
@@ -214,7 +214,7 @@
             this.ribbonPageGroup2,
             this.ribbonPageGroup5});
             this.rpMain.Name = "rpMain";
-            this.rpMain.Text = "РћРїР»Р°С‚С‹";
+            this.rpMain.Text = "Оплаты";
             // 
             // ribbonPageGroup1
             // 
@@ -222,21 +222,21 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDel);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnEdit);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "РћРїР»Р°С‚С‹";
+            this.ribbonPageGroup1.Text = "Оплаты";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.deFrom);
             this.ribbonPageGroup2.ItemLinks.Add(this.deTo);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "РџРµСЂРёРѕРґ";
+            this.ribbonPageGroup2.Text = "Период";
             // 
             // rpOstatki
             // 
             this.rpOstatki.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4});
             this.rpOstatki.Name = "rpOstatki";
-            this.rpOstatki.Text = "РћСЃС‚Р°С‚РєРё";
+            this.rpOstatki.Text = "Остатки";
             // 
             // ribbonPageGroup4
             // 
@@ -248,13 +248,13 @@
             this.rpVipiska.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3});
             this.rpVipiska.Name = "rpVipiska";
-            this.rpVipiska.Text = "Р’С‹РїРёСЃРєР°";
+            this.rpVipiska.Text = "Выписка";
             // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Р—Р°РіСЂСѓР·РєР°";
+            this.ribbonPageGroup3.Text = "Загрузка";
             // 
             // ribbonStatusBar1
             // 
@@ -329,11 +329,11 @@
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.btnReload);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "РћР±РЅРѕРІРёС‚СЊ";
+            this.ribbonPageGroup5.Text = "Обновить";
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "РћР±РЅРѕРІРёС‚СЊ";
+            this.barButtonItem2.Caption = "Обновить";
             this.barButtonItem2.Id = 11;
             this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
             this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
@@ -353,7 +353,7 @@
             this.Name = "FrmMain";
             this.Ribbon = this.ribbonControl1;
             this.StatusBar = this.ribbonStatusBar1;
-            this.Text = "РљРѕРЅС‚СѓСЂ Р”РѕРєСѓРјРµРЅС‚";
+            this.Text = "Контур Документ";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
