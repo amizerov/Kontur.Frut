@@ -24,9 +24,13 @@ namespace WebService.v._1.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public JArray Get(int id)
         {
-            return "value";
+            DataTable dt = G.db_select($"GetOplataChangesHistory {id}");
+            if (G.CheckDB())
+                return ToJson(dt);
+            else
+                return new JArray { "Error", G.LastError };
         }
 
         // POST api/values

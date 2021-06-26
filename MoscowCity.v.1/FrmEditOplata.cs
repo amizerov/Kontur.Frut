@@ -247,5 +247,10 @@ namespace Frut
         {
             txtSumma.BackColor = leFirma.BackColor;
         }
+
+        private void chPaied_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chPaied.Checked) chVidano.Checked = true;
+        }
     }
 }

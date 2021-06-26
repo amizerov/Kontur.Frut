@@ -32,4 +32,17 @@ namespace WebService.v._1.Models
         public bool IsVidano { get; set; }
         public String usr { get; set; }
     }
+
+    public class CNewOplata
+    {
+        public int nomerp { get; set; }
+        public int posred { get; set; }
+        public double summap { get; set; }
+        public int firmap { get; set; }
+        public int contra { get; set; }
+        public int naznac { get; set; }
+        public int procen { get; set; }
+        public string datepp { get; set; }
+        public string usr { get; set; }
+    }
 }

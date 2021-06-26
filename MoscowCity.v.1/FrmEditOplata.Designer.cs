@@ -326,6 +326,7 @@
             this.chPaied.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.chPaied.Size = new System.Drawing.Size(131, 19);
             this.chPaied.TabIndex = 14;
+            this.chPaied.CheckedChanged += new System.EventHandler(this.chPaied_CheckedChanged);
             // 
             // timer1
             // 

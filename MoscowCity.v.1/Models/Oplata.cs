@@ -75,6 +75,8 @@ namespace Frut.Models
         {
             DataTable old_dt = G.db_select($"select * from Oplata where ID = {ID}");
 
+            if (IsPaied /*Аванс*/) IsVidano = true;
+
             DataTable new_dt = G.db_select(
                 $@"SaveUpdate_Oplata {ID}
                                ,{Organization.ID}
