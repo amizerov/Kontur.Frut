@@ -18,7 +18,7 @@ namespace WebService.v._1.Controllers
         {
             DataTable dt = G.db_select($"GetOplatas '{from}', '{to}'");
             if (G.CheckDB())
-                return ToJson(dt);
+                return JsonHelper.ToJson(dt);
             else
                 return new JArray { "Error", G.LastError };
         }
@@ -28,13 +28,13 @@ namespace WebService.v._1.Controllers
         {
             DataTable dt = G.db_select($"GetOplataChangesHistory {id}");
             if (G.CheckDB())
-                return ToJson(dt);
+                return JsonHelper.ToJson(dt);
             else
                 return new JArray { "Error", G.LastError };
         }
 
         // POST api/values
-        public void Post([FromBody] CUpdateOplataField v)
+        public JArray Post([FromBody] CUpdateOplataField v)
         {
             int val;
             string usr = v.usr;
@@ -46,7 +46,10 @@ namespace WebService.v._1.Controllers
             else
                 val = v.BoolVal ? 1 : 0;
 
-            G.db_exec($"OplUpd_{fin} {oid}, {val}, '{usr}'");
+            DataTable dt = G.db_select($"OplUpd_{fin} {oid}, {val}, '{usr}'");
+
+            JArray res = JsonHelper.ToJson(dt);
+            return res;
         }
 
         // PUT api/values/5
@@ -57,22 +60,6 @@ namespace WebService.v._1.Controllers
         // DELETE api/values/5
         public void Delete(int id)
         {
-        }
-
-        JArray ToJson(DataTable source)
-        {
-            JArray result = new JArray();
-            JObject row;
-            foreach (DataRow dr in source.Rows)
-            {
-                row = new JObject();
-                foreach (DataColumn col in source.Columns)
-                {
-                    row.Add(col.ColumnName.Trim(), JToken.FromObject(dr[col]));
-                }
-                result.Add(row);
-            }
-            return result;
         }
     }
 }

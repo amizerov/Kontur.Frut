@@ -17,25 +17,9 @@ namespace WebService.v._1.Controllers
         {
             DataTable dt = G.db_select($"DoLogin '{lgn}', '{pwd}'");
             if (G.CheckDB())
-                return ToJson(dt);
+                return JsonHelper.ToJson(dt);
             else
                 return new JArray { "Error", G.LastError };
-        }
-
-        JArray ToJson(DataTable source)
-        {
-            JArray result = new JArray();
-            JObject row;
-            foreach (DataRow dr in source.Rows)
-            {
-                row = new JObject();
-                foreach (DataColumn col in source.Columns)
-                {
-                    row.Add(col.ColumnName.Trim(), JToken.FromObject(dr[col]));
-                }
-                result.Add(row);
-            }
-            return result;
         }
     }
 }

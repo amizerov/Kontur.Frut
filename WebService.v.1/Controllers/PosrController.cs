@@ -1,5 +1,4 @@
-﻿using static WebService.v._1.Tools.JsonHelpers;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Data;
 using WebService.v._1.Models;
 using am.BL;
@@ -14,7 +13,7 @@ namespace WebService.v._1.Controllers
         {
             DataTable dt = G.db_select($"GetPosredList");
             if (G.CheckDB())
-                return ToJson(dt);
+                return JsonHelper.ToJson(dt);
             else
                 return new JArray { "Error", G.LastError };
         }

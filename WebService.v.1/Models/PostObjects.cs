@@ -43,6 +43,7 @@ namespace WebService.v._1.Models
         public int naznac { get; set; }
         public int procen { get; set; }
         public string datepp { get; set; }
+        public string imagep { get; set; }
         public string usr { get; set; }
     }
 }

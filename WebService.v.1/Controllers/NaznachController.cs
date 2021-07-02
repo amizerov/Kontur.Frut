@@ -1,6 +1,5 @@
 ﻿using am.BL;
 using Newtonsoft.Json.Linq;
-using static WebService.v._1.Tools.JsonHelpers;
 using System.Data;
 using System.Web.Http;
 
@@ -13,7 +12,7 @@ namespace WebService.v._1.Controllers
         {
             DataTable dt = G.db_select($"GetNaznachList");
             if (G.CheckDB())
-                return ToJson(dt);
+                return JsonHelper.ToJson(dt);
             else
                 return new JArray { "Error", G.LastError };
         }

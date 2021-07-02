@@ -5,9 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Web;
 
-namespace WebService.v._1.Tools
+namespace WebService.v._1.Controllers
 {
-    public static class JsonHelpers
+    public static class JsonHelper
     {
 
         public static JArray ToJson(DataTable source)
