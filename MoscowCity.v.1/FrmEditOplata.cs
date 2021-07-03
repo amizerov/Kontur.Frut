@@ -272,5 +272,12 @@ namespace Frut
             f.pictureEdit1.Image = picOrder.Image;
             f.ShowDialog();
         }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            FrmHistory f = new FrmHistory();
+            f.Oplata_ID = Oplata.ID;
+            f.ShowDialog();
+        }
     }
 }

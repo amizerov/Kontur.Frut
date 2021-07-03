@@ -59,6 +59,7 @@
             this.chVidano = new DevExpress.XtraEditors.CheckEdit();
             this.picOrder = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.btnHistory = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.deDataPP.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDataPP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSumma.Properties)).BeginInit();
@@ -378,12 +379,24 @@
             this.labelControl7.TabIndex = 0;
             this.labelControl7.Text = "Фото пп";
             // 
+            // btnHistory
+            // 
+            this.btnHistory.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHistory.ImageOptions.Image")));
+            this.btnHistory.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnHistory.Location = new System.Drawing.Point(34, 283);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(53, 63);
+            this.btnHistory.TabIndex = 17;
+            this.btnHistory.Text = "История";
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
             // FrmEditOplata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(525, 383);
+            this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.picOrder);
             this.Controls.Add(this.chVidano);
             this.Controls.Add(this.chRecieved);
@@ -470,5 +483,6 @@
         private DevExpress.XtraEditors.CheckEdit chVidano;
         private DevExpress.XtraEditors.PictureEdit picOrder;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.SimpleButton btnHistory;
     }
 }
