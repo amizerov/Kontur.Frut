@@ -16,9 +16,10 @@ class Oplata {
     var contra = 0
     var naznac = 0
     var procen = 0
-    var datepp = ""    
+    var datepp = ""
+    var imageData = Data()
 
-    init(_ n:Int,_ p:Int,_ s:Double,_ f:Int,_ c:Int,_ a:Int,_ r:Int,_ d:String) {
+    init(_ n:Int,_ p:Int,_ s:Double,_ f:Int,_ c:Int,_ a:Int,_ r:Int,_ d:String,_ imDa:Data) {
         nomerp = n
         posred = p
         summap = s
@@ -27,6 +28,7 @@ class Oplata {
         naznac = a
         procen = r
         datepp = d
+        imageData = imDa
     }
     func Save() {
         let body: [String: Any] =
@@ -43,7 +45,9 @@ class Oplata {
         ]
         let s = ApiUrlString
         ApiUrlString = "https://frutwebapi.svr.vc/api/NewOpla"
-        Post(body: body)
+        Post(body: body) { id in
+            PostImage.uploadMultipart(oplId: id, img: self.imageData)
+        }
         ApiUrlString = s
     }
 }

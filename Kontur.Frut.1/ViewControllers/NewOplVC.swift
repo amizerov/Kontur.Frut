@@ -46,6 +46,13 @@ class NewOplVC: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        txtPosr.text = "Агил"
+        txtNomer.text = "000"
+        txtSumma.text = "1000000"
+        txtFirma.text = "ООО \"МР-Трайдинг\""
+        txtContra.text = "АМЕЛИЯ"
+        txtNaznach.text = "Безнал"
+        
         dpDatePP.preferredDatePickerStyle = .compact
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -113,7 +120,7 @@ class NewOplVC: UIViewController,
     
     @IBAction func takePictureClicked(_ sender: UIButton) {
  
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = false
         
         present(imagePicker, animated: true, completion: nil)
@@ -123,7 +130,8 @@ class NewOplVC: UIViewController,
                     didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = img
-            imageData = img.jpegData(compressionQuality: 0.8) ?? Data()
+            //imageData = img.jpegData(compressionQuality: 0.8) ?? Data()
+            imageData = img.pngData() ?? Data()
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
@@ -150,7 +158,7 @@ class NewOplVC: UIViewController,
             let frmr = DateFormatter()
             frmr.dateFormat = "yyyy-MM-dd"
             
-            let opl = Oplata(n,p,s,f,c,a,r,frmr.string(from: d))
+            let opl = Oplata(n,p,s,f,c,a,r,frmr.string(from: d),imageData)
             opl.Save()
             
             dismiss(animated: true)

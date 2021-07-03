@@ -19,7 +19,7 @@ func SetProcent(oid: Int, fin: String, val: Double, user: String = "iPhone") {
         "IntVal": Int(val),
         "usr": user
     ]
-    Post(body: body)
+    Post(body: body) {_ in }
 }
 
 func SetValue(oid: Int, fin: String, val: Bool, user: String = "iPhone")
@@ -31,10 +31,10 @@ func SetValue(oid: Int, fin: String, val: Bool, user: String = "iPhone")
         "BoolVal": val,
         "usr": user
     ]
-    Post(body: body)
+    Post(body: body) { _ in }
 }
 
-func Post(body: [String: Any])
+func Post(body: [String: Any], completion: @escaping (_ id: Int) -> ())
 {
     let api_url = ApiUrlString
     let url = URL(string: api_url)!
@@ -55,9 +55,18 @@ func Post(body: [String: Any])
             print(error?.localizedDescription ?? "No data")
             return
         }
-        let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-        if let responseJSON = responseJSON as? [String: Any] {
-            print(responseJSON)
+        do {
+            let jsonArr = try JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
+            
+            var id = 0
+            for dic in jsonArr {
+                id = dic["id"] as! Int
+                completion(id)
+            }
+            print("json: \(jsonArr)")
+        }
+        catch let err {
+            print("Error: \(err)")
         }
     }
 
