@@ -57,6 +57,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.chRecieved = new DevExpress.XtraEditors.CheckEdit();
             this.chVidano = new DevExpress.XtraEditors.CheckEdit();
+            this.picOrder = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.deDataPP.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDataPP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSumma.Properties)).BeginInit();
@@ -72,11 +74,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chPaied.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chRecieved.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chVidano.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOrder.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(44, 36);
+            this.labelControl1.Location = new System.Drawing.Point(34, 36);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(66, 13);
             this.labelControl1.TabIndex = 0;
@@ -84,7 +87,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(347, 76);
+            this.labelControl2.Location = new System.Drawing.Point(337, 76);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(26, 13);
             this.labelControl2.TabIndex = 0;
@@ -92,7 +95,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(79, 160);
+            this.labelControl3.Location = new System.Drawing.Point(69, 160);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(31, 13);
             this.labelControl3.TabIndex = 0;
@@ -100,7 +103,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(89, 117);
+            this.labelControl4.Location = new System.Drawing.Point(79, 117);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(21, 13);
             this.labelControl4.TabIndex = 0;
@@ -108,7 +111,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(257, 36);
+            this.labelControl5.Location = new System.Drawing.Point(247, 36);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(55, 13);
             this.labelControl5.TabIndex = 0;
@@ -116,7 +119,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(44, 76);
+            this.labelControl6.Location = new System.Drawing.Point(34, 76);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(66, 13);
             this.labelControl6.TabIndex = 0;
@@ -124,7 +127,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(301, 160);
+            this.labelControl8.Location = new System.Drawing.Point(291, 160);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(11, 13);
             this.labelControl8.TabIndex = 0;
@@ -132,7 +135,7 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(385, 160);
+            this.labelControl9.Location = new System.Drawing.Point(375, 160);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(36, 13);
             this.labelControl9.TabIndex = 0;
@@ -140,7 +143,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(57, 199);
+            this.labelControl10.Location = new System.Drawing.Point(47, 199);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(53, 13);
             this.labelControl10.TabIndex = 0;
@@ -149,7 +152,7 @@
             // deDataPP
             // 
             this.deDataPP.EditValue = new System.DateTime(2021, 5, 11, 0, 0, 0, 0);
-            this.deDataPP.Location = new System.Drawing.Point(379, 73);
+            this.deDataPP.Location = new System.Drawing.Point(369, 73);
             this.deDataPP.Name = "deDataPP";
             this.deDataPP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -162,7 +165,7 @@
             // txtSumma
             // 
             this.txtSumma.EditValue = "0";
-            this.txtSumma.Location = new System.Drawing.Point(116, 157);
+            this.txtSumma.Location = new System.Drawing.Point(106, 157);
             this.txtSumma.Name = "txtSumma";
             this.txtSumma.Properties.Mask.EditMask = "c2";
             this.txtSumma.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -175,7 +178,7 @@
             // 
             // txtINN
             // 
-            this.txtINN.Location = new System.Drawing.Point(116, 114);
+            this.txtINN.Location = new System.Drawing.Point(106, 114);
             this.txtINN.Name = "txtINN";
             this.txtINN.Size = new System.Drawing.Size(121, 20);
             this.txtINN.TabIndex = 5;
@@ -183,7 +186,7 @@
             // 
             // txtNomerPP
             // 
-            this.txtNomerPP.Location = new System.Drawing.Point(116, 73);
+            this.txtNomerPP.Location = new System.Drawing.Point(106, 73);
             this.txtNomerPP.Name = "txtNomerPP";
             this.txtNomerPP.Size = new System.Drawing.Size(121, 20);
             this.txtNomerPP.TabIndex = 3;
@@ -191,7 +194,7 @@
             // txtPenyProc
             // 
             this.txtPenyProc.EditValue = "0";
-            this.txtPenyProc.Location = new System.Drawing.Point(318, 157);
+            this.txtPenyProc.Location = new System.Drawing.Point(308, 157);
             this.txtPenyProc.Name = "txtPenyProc";
             this.txtPenyProc.Properties.Mask.EditMask = "P";
             this.txtPenyProc.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -205,7 +208,7 @@
             // 
             this.txtPenySumma.EditValue = "0";
             this.txtPenySumma.Enabled = false;
-            this.txtPenySumma.Location = new System.Drawing.Point(427, 157);
+            this.txtPenySumma.Location = new System.Drawing.Point(417, 157);
             this.txtPenySumma.Name = "txtPenySumma";
             this.txtPenySumma.Properties.Mask.EditMask = "c2";
             this.txtPenySumma.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -218,7 +221,7 @@
             // 
             this.txtSummaZ.EditValue = "0";
             this.txtSummaZ.Enabled = false;
-            this.txtSummaZ.Location = new System.Drawing.Point(116, 196);
+            this.txtSummaZ.Location = new System.Drawing.Point(106, 196);
             this.txtSummaZ.Name = "txtSummaZ";
             this.txtSummaZ.Properties.Mask.EditMask = "c2";
             this.txtSummaZ.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -229,7 +232,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(252, 199);
+            this.labelControl11.Location = new System.Drawing.Point(242, 199);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(60, 13);
             this.labelControl11.TabIndex = 0;
@@ -237,7 +240,7 @@
             // 
             // cbNaznachen
             // 
-            this.cbNaznachen.Location = new System.Drawing.Point(318, 196);
+            this.cbNaznachen.Location = new System.Drawing.Point(308, 196);
             this.cbNaznachen.Name = "cbNaznachen";
             this.cbNaznachen.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -248,7 +251,7 @@
             // btnSave
             // 
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(385, 271);
+            this.btnSave.Location = new System.Drawing.Point(375, 306);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(115, 40);
             this.btnSave.TabIndex = 10;
@@ -259,7 +262,7 @@
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(276, 271);
+            this.btnCancel.Location = new System.Drawing.Point(266, 306);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(92, 40);
             this.btnCancel.TabIndex = 11;
@@ -268,7 +271,7 @@
             // 
             // leFirma
             // 
-            this.leFirma.Location = new System.Drawing.Point(257, 114);
+            this.leFirma.Location = new System.Drawing.Point(247, 114);
             this.leFirma.Name = "leFirma";
             this.leFirma.Properties.AcceptEditorTextAsNewValue = DevExpress.Utils.DefaultBoolean.True;
             this.leFirma.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
@@ -287,7 +290,7 @@
             // 
             // lePosr
             // 
-            this.lePosr.Location = new System.Drawing.Point(318, 33);
+            this.lePosr.Location = new System.Drawing.Point(308, 33);
             this.lePosr.Name = "lePosr";
             this.lePosr.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -301,7 +304,7 @@
             // 
             // leOrgan
             // 
-            this.leOrgan.Location = new System.Drawing.Point(116, 33);
+            this.leOrgan.Location = new System.Drawing.Point(106, 33);
             this.leOrgan.Name = "leOrgan";
             this.leOrgan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.leOrgan.Properties.Appearance.Options.UseFont = true;
@@ -318,13 +321,13 @@
             // 
             // chPaied
             // 
-            this.chPaied.Location = new System.Drawing.Point(106, 239);
+            this.chPaied.Location = new System.Drawing.Point(247, 249);
             this.chPaied.Name = "chPaied";
             this.chPaied.Properties.Appearance.Options.UseTextOptions = true;
             this.chPaied.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.chPaied.Properties.Caption = "Аванс";
             this.chPaied.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.chPaied.Size = new System.Drawing.Size(131, 19);
+            this.chPaied.Size = new System.Drawing.Size(73, 19);
             this.chPaied.TabIndex = 14;
             this.chPaied.CheckedChanged += new System.EventHandler(this.chPaied_CheckedChanged);
             // 
@@ -336,32 +339,52 @@
             // 
             // chRecieved
             // 
-            this.chRecieved.Location = new System.Drawing.Point(106, 264);
+            this.chRecieved.Location = new System.Drawing.Point(332, 249);
             this.chRecieved.Name = "chRecieved";
             this.chRecieved.Properties.Appearance.Options.UseTextOptions = true;
             this.chRecieved.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.chRecieved.Properties.Caption = "Поступили на счет";
+            this.chRecieved.Properties.Caption = "Поступили";
             this.chRecieved.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.chRecieved.Size = new System.Drawing.Size(131, 19);
+            this.chRecieved.Size = new System.Drawing.Size(79, 19);
             this.chRecieved.TabIndex = 15;
             // 
             // chVidano
             // 
-            this.chVidano.Location = new System.Drawing.Point(106, 289);
+            this.chVidano.Location = new System.Drawing.Point(417, 249);
             this.chVidano.Name = "chVidano";
             this.chVidano.Properties.Appearance.Options.UseTextOptions = true;
             this.chVidano.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.chVidano.Properties.Caption = "Выдано";
             this.chVidano.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.chVidano.Size = new System.Drawing.Size(131, 19);
+            this.chVidano.Size = new System.Drawing.Size(73, 19);
             this.chVidano.TabIndex = 15;
+            // 
+            // picOrder
+            // 
+            this.picOrder.EditValue = ((object)(resources.GetObject("picOrder.EditValue")));
+            this.picOrder.Location = new System.Drawing.Point(106, 239);
+            this.picOrder.Name = "picOrder";
+            this.picOrder.Properties.InitialImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("picOrder.Properties.InitialImageOptions.Image")));
+            this.picOrder.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picOrder.Size = new System.Drawing.Size(121, 107);
+            this.picOrder.TabIndex = 16;
+            this.picOrder.DoubleClick += new System.EventHandler(this.picOrder_DoubleClick);
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(59, 239);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(41, 13);
+            this.labelControl7.TabIndex = 0;
+            this.labelControl7.Text = "Фото пп";
             // 
             // FrmEditOplata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(541, 344);
+            this.ClientSize = new System.Drawing.Size(525, 383);
+            this.Controls.Add(this.picOrder);
             this.Controls.Add(this.chVidano);
             this.Controls.Add(this.chRecieved);
             this.Controls.Add(this.chPaied);
@@ -381,6 +404,7 @@
             this.Controls.Add(this.labelControl11);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl10);
             this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.labelControl8);
@@ -409,6 +433,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chPaied.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chRecieved.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chVidano.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOrder.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,5 +468,7 @@
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.CheckEdit chRecieved;
         private DevExpress.XtraEditors.CheckEdit chVidano;
+        private DevExpress.XtraEditors.PictureEdit picOrder;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

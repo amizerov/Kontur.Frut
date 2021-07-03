@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Frut.Models;
 using am.BL;
+using System.IO;
 
 namespace Frut
 {
@@ -24,6 +25,8 @@ namespace Frut
 
         private void FrmEditOplata_Load(object sender, EventArgs e)
         {
+            LoadPpPhoto();
+
             leOrgan.Properties.DataSource = new COrganizations();
             leOrgan.Properties.PopulateColumns();
             leOrgan.Properties.Columns[0].Visible = false;
@@ -220,6 +223,16 @@ namespace Frut
             timer1.Stop();
         }
 
+        void LoadPpPhoto()
+        {
+            string f = "D:\\Projects\\Frut\\DB\\ppp\\" + Oplata.ID + ".png";
+            if (File.Exists(f))
+            {
+                picOrder.Image = Image.FromFile(f);
+                picOrder.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            }
+        }
+
         string s = "";
         private void leFirma_Leave(object sender, EventArgs e)
         {
@@ -251,6 +264,13 @@ namespace Frut
         private void chPaied_CheckedChanged(object sender, EventArgs e)
         {
             if (chPaied.Checked) chVidano.Checked = true;
+        }
+
+        private void picOrder_DoubleClick(object sender, EventArgs e)
+        {
+            FrmPictureOrder f = new FrmPictureOrder();
+            f.pictureEdit1.Image = picOrder.Image;
+            f.ShowDialog();
         }
     }
 }

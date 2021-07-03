@@ -4,11 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Configuration;
@@ -45,76 +47,34 @@ namespace WebService.v._1.Controllers
         [Route("api/NewOpla/ImgUpload")]
         public async Task<HttpResponseMessage> ImgUpload()
         {
-            // Check if the request contains multipart/form-data.  
+            // Check if the request contains multipart/form-data.
             if (!Request.Content.IsMimeMultipartContent())
             {
                 throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
             }
 
-            var provider = await Request.Content.ReadAsMultipartAsync<InMemoryMultipartFormDataStreamProvider>(new InMemoryMultipartFormDataStreamProvider());
-            //access form data  
-            NameValueCollection formData = provider.FormData;
-            //access files  
-            IList<HttpContent> files = provider.Files;
+            string root = HttpContext.Current.Server.MapPath("~/App_Data");
+            var provider = new MultipartFormDataStreamProvider(root);
 
-            HttpContent file1 = files[0];
-            //var thisFileName = file1.Headers.ContentDisposition.FileName.Trim('\"');
-
-            ////-------------------------------------For testing----------------------------------  
-            //to append any text in filename.  
-            var thisFileName = file1.Headers.ContentDisposition.FileName.Trim('\"') + DateTime.Now.ToString("yyyyMMddHHmmssfff"); //ToDo: Uncomment this after UAT as per Jeeevan  
-
-            List<string> tempFileName = thisFileName.Split('.').ToList();  
-            int counter = 0;  
-            foreach (var f in tempFileName)  
-            {  
-                if (counter == 0)  
-                    thisFileName = f;  
-
-                if (counter > 0)  
-                {  
-                    thisFileName = thisFileName + "_" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + "." + f;  
-                }  
-                counter++;  
-            }  
-
-            ////-------------------------------------For testing----------------------------------  
-
-            string filename = String.Empty;
-            Stream input = await file1.ReadAsStreamAsync();
-            string directoryName = String.Empty;
-            string URL = String.Empty;
-            string tempDocUrl = WebConfigurationManager.AppSettings["DocsUrl"];
-
-            if (formData["ClientDocs"] == "ClientDocs")
+            try
             {
-                var path = HttpRuntime.AppDomainAppPath;
-                directoryName = System.IO.Path.Combine(path, "ClientDocument");
-                filename = System.IO.Path.Combine(directoryName, thisFileName);
+                // Write image on disk
+                await Request.Content.ReadAsMultipartAsync(provider);
 
-                //Deletion exists file  
-                if (File.Exists(filename))
+                foreach (MultipartFileData file in provider.FileData)
                 {
-                    File.Delete(filename);
+                    string f1 = file.Headers.ContentDisposition.FileName.Replace("\"", "");
+                    string f2 = file.LocalFileName;
+                    G.WriteLog(f1 + " / " + f2);
+                    File.Copy(f2, "D:\\Projects\\Frut\\DB\\ppp\\" + f1);
                 }
-
-                string DocsPath = tempDocUrl + "/" + "ClientDocument" + "/";
-                URL = DocsPath + thisFileName;
-
+                return Request.CreateResponse(HttpStatusCode.OK);
             }
-
-
-            //Directory.CreateDirectory(@directoryName);  
-            using (Stream file = File.OpenWrite(filename))
+            catch (System.Exception e)
             {
-                input.CopyTo(file);
-                //close file  
-                file.Close();
+                G.WriteLog("Error ImgUpload: " + e.Message);
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e);
             }
-
-            var response = Request.CreateResponse(HttpStatusCode.OK);
-            response.Headers.Add("DocsUrl", URL);
-            return response;
         }
 
     }
