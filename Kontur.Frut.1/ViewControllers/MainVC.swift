@@ -203,6 +203,21 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate
             // и передаем данные по выбранной ячейке
             dv.theRow = arRows[indexPath.row]
             dv.theRow.LoadHistory()
+            api.GetPictOrder(dv.theRow.ID)
+            api.gotPictOrder = { data in
+                var imageBase64String = String(data: data, encoding: .utf8)
+                if imageBase64String == nil { return }
+                imageBase64String = imageBase64String?.replacingOccurrences(of: "\"", with: "")
+                let imageData = Data(base64Encoded: imageBase64String ?? "")
+                if imageData == nil { return }
+                
+                let img = UIImage(data: imageData ?? Data())
+                dv.theRow.PictOrder = img ?? UIImage()
+                DispatchQueue.main.async
+                {
+                    dv.btnPhoto.isEnabled = true
+                }
+             }
  
             self.navigationController?.pushViewController(dv, animated: true)
         }

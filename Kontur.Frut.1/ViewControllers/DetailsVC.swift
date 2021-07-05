@@ -10,6 +10,9 @@ import UIKit
 class DetailsVC: UIViewController {
 
     var login = Login()
+    public var imgPP: UIImage?
+    
+    @IBOutlet weak var btnPhoto: UIBarButtonItem!
     
     @IBOutlet weak var lblHeader: UILabel!
     @IBOutlet weak var lblOrgany: UILabel!
@@ -96,6 +99,10 @@ class DetailsVC: UIViewController {
         if segue.destination is HistoryTVC {
             let hvc = segue.destination as? HistoryTVC
             hvc?.cngs = theRow.Changes
+        }
+        if segue.destination is PictOrderVC {
+            let pvc = segue.destination as? PictOrderVC
+            pvc?.img = theRow.PictOrder
         }
     }
 }

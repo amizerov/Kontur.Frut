@@ -3,21 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "static RowData.GetIntValue(_:):StructRow.swift">
-      </ContextState>
-      <ContextState
-         contextName = "NewOplVC.tapChooseFirma(_:):NewOplVC.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "fs">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "closure #4 in MainVC.prepare(for:sender:):MainVC.swift">
       </ContextState>
       <ContextState
          contextName = "Posreds.init(fromData:):Posrednik.swift">
          <PersistentStrings>
             <PersistentString
                value = "str">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NewOplVC.tapChooseFirma(_:):NewOplVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fs">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -30,7 +30,39 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #4 in MainVC.prepare(for:sender:):MainVC.swift">
+         contextName = "closure #1 in RowData.LoadPictOrder():StructRow.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.PictOrder">
+            </PersistentString>
+            <PersistentString
+               value = "String(data: data, encoding: .utf8)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Post(body:completion:):HttpRequest.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "api_url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainVC.tableView(_:didSelectRowAt:):MainVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dv.theRow">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailsVC.prepare(for:sender:):DetailsVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "theRow.PictOrder">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "NewOplVC.validateFields():NewOplVC.swift">
@@ -44,12 +76,21 @@
          contextName = "Oplata.Save():Oplata.swift">
          <PersistentStrings>
             <PersistentString
+               value = "imagep.count">
+            </PersistentString>
+            <PersistentString
                value = "procen">
             </PersistentString>
             <PersistentString
                value = "summap">
             </PersistentString>
+            <PersistentString
+               value = "imagep">
+            </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static RowData.GetIntValue(_:):StructRow.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in Posreds.init(fromData:):Posrednik.swift">

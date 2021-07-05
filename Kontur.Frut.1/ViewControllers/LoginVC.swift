@@ -52,6 +52,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.txtLogin.text = "dir"
+        self.txtPassword.text = "123"
     }
 
 }

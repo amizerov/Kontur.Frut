@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 class RowData
 {
+    let api = ApiService()
+    
     /*0*/var ID: Int = 0
     /*1*/var DTC: Date = Date()
     /*2*/var DataPP: Date = Date()
@@ -25,26 +28,25 @@ class RowData
     /*3*/var IsPaied: Bool = false
     /*4*/var IsReced: Bool = false
     /*5*/var IsVidan: Bool = false
+    
+    var PictOrder = UIImage()
 
     var Changes = [Change]()
     func LoadHistory() {
-        let api = ApiService()
+
         api.GetHistory(ID)
         api.gotHistory = { data in
-            self.Changes = RowData.LoadChanges(fromData: data)
+            self.LoadChanges(fromData: data)
         }
     }
-    static func LoadChanges(fromData d: Data) -> [Change] {
+    private func LoadChanges(fromData d: Data) {
         var ar = [Change]()
         let a: [String] = String(data: d, encoding: .utf8)!.components(separatedBy: "},{")
-        if (a.count == 0 || a[0] == "[]") {
-            return ar
-        }
         for e in a {
             let r = Change.Load(from: e)
             ar.append(r)
         }
-        return ar
+        self.Changes = ar
     }
     
     static func LoadRows(fromData d: Data) -> [RowData] {

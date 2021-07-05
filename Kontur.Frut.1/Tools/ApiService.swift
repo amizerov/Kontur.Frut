@@ -8,6 +8,7 @@
 
 import Foundation
 
+//public let api = ApiService()
 public class ApiService {
     
     init() {
@@ -28,13 +29,24 @@ public class ApiService {
     }
     
     private let apiUrl = "https://frutwebapi.svr.vc/api"
-    public var gotHistory: ((_ data: Data) -> ())?
     
+    public var gotHistory: ((_ data: Data) -> ())?
     public func GetHistory(_ id_oplata: Int) {
         if let url = URL(string: apiUrl + "/values/\(id_oplata)") {
            URLSession.shared.dataTask(with: url) { data, response, error in
               if let data = data {
                 self.gotHistory?(data)
+              }
+           }.resume()
+        }
+    }
+    
+    public var gotPictOrder: ((_ data: Data) -> ())?
+    public func GetPictOrder(_ id_oplata: Int) {
+        if let url = URL(string: apiUrl + "/picor/\(id_oplata)") {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+              if let data = data {
+                self.gotPictOrder?(data)
               }
            }.resume()
         }
