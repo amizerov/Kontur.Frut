@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using am.BL;
+using RestSharp;
 
 namespace Frut
 {
@@ -138,6 +140,30 @@ namespace Frut
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var clt = new RestClient("http://178.63.3.165/MobileAPI/");
+            var req = new RestRequest("hs/RCB/Report", DataFormat.Json);
+            var result = clt.Execute(req);
+            string js = result.Content;
+            dynamic jo = SimpleJson.DeserializeObject(js);
+            foreach (var o in jo)
+            {
+                var n = o.name;
+                var r = o.CashRub?.ToString().Replace(',', '.');
+                var d = o.CashDoll?.ToString().Replace(',', '.');
+                G.db_exec($"SetPosred '{n}', {r??0}, {d??0}");
+            }
+
+            timer1.Enabled = true;
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            barButtonItem3_ItemClick(null, null);
         }
     }
 }
