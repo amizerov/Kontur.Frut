@@ -11,7 +11,7 @@ import UIKit
 class StartVC: UIViewController {
 
     var naviColor = #colorLiteral(red: 0.8007361293, green: 0.9238154888, blue: 0.8164390922, alpha: 1)
-    var sorryIwasGoneToMainVC = false
+    var sorryIwasGoneToBalancesVC = false
     
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnProsto: UIButton!
@@ -27,7 +27,7 @@ class StartVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if sorryIwasGoneToMainVC {
+        if sorryIwasGoneToBalancesVC {
             DispatchQueue.main.async {
                 if let mvc = self.storyboard?
                     .instantiateViewController(identifier: "MainVC") as? MainVC
@@ -36,7 +36,7 @@ class StartVC: UIViewController {
                 }
             }
             navigationController?.navigationBar.backgroundColor = naviColor
-            sorryIwasGoneToMainVC = false
+            sorryIwasGoneToBalancesVC = false
         }
     }
     
@@ -47,18 +47,18 @@ class StartVC: UIViewController {
                 if login.IsIn {
                     DispatchQueue.main.async {
                         self.showSpiner()
-                        if let mvc = self.storyboard?
-                            .instantiateViewController(identifier: "MainVC") as? MainVC
+                        if let bvc = self.storyboard?
+                            .instantiateViewController(identifier: "BalancesVC") as? BalancesVC
                         {
-                            mvc.login = login
-                            self.sorryIwasGoneToMainVC = true
-                            self.navigationController?.pushViewController(mvc, animated: true)
+                            bvc.login = login
+                            self.sorryIwasGoneToBalancesVC = true
+                            self.navigationController?.pushViewController(bvc, animated: true)
                         }
                     }
                 }
             }
         }
-        if segue.destination is MainVC {
+        if segue.destination is BalancesVC {
             showSpiner()
         }
     }

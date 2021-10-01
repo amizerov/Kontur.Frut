@@ -9,6 +9,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Балансы-->
+        <scene sceneID="F5i-jq-ez9">
+            <objects>
+                <tableViewController storyboardIdentifier="BalancesVC" id="mcx-TV-3Fa" customClass="BalancesVC" customModule="Kontur_Frut_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cbO-Eq-R92">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BalanceCell" rowHeight="100" id="yON-q5-Ih3">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yON-q5-Ih3" id="BT0-g3-dQj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mcx-TV-3Fa" id="mtj-ta-ciX"/>
+                            <outlet property="delegate" destination="mcx-TV-3Fa" id="naV-ad-XcA"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Балансы" id="lpt-tB-yJh">
+                        <barButtonItem key="backBarButtonItem" title="Балансы" id="SlH-uf-FFN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Операции" id="qHl-2W-QEe">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="SY7-Hb-93t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFy-By-16L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3319.1999999999998" y="578.57142857142856"/>
+        </scene>
         <!--New OplVC-->
         <scene sceneID="qbD-Qs-sI8">
             <objects>
@@ -315,7 +352,7 @@
             </objects>
             <point key="canvasLocation" x="-2442.4000000000001" y="578.57142857142856"/>
         </scene>
-        <!--Контур фокус-->
+        <!--Операции-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainVC" customModule="Kontur_Frut_1" customModuleProvider="target" sceneMemberID="viewController">
@@ -341,7 +378,7 @@
                             <constraint firstItem="LgI-0v-hcg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xak-sk-M7C"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Контур фокус" id="3oG-f3-lcu">
+                    <navigationItem key="navigationItem" title="Операции" id="3oG-f3-lcu">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="0U7-C4-IFL"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="Ysc-3l-Rnn">
@@ -360,7 +397,7 @@
                                     </segue>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" id="HPy-AI-K8A">
+                            <barButtonItem title="Фильтр по посреднику" id="HPy-AI-K8A">
                                 <imageReference key="image" image="list.number" catalog="system" symbolScale="large"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -369,7 +406,7 @@
                                     </segue>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" id="a4d-o2-QH7">
+                            <barButtonItem title="Фильтр по фирме" id="a4d-o2-QH7">
                                 <imageReference key="image" image="list.number" catalog="system" symbolScale="large"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -1160,7 +1197,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="SegueToMainVC" id="uD0-E7-W04"/>
+                                            <segue destination="mcx-TV-3Fa" kind="show" id="GqR-C9-w2i"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1182,7 +1219,9 @@
                             <constraint firstItem="jIX-KM-SLQ" firstAttribute="centerX" secondItem="RuS-Er-dbC" secondAttribute="centerX" id="rgs-al-mnl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Зачем вы тут?" id="lpE-FK-AXw"/>
+                    <navigationItem key="navigationItem" title="Зачем вы тут?" id="lpE-FK-AXw">
+                        <barButtonItem key="backBarButtonItem" title="Выйти" id="BQK-Pz-ugf"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnLogin" destination="ZVS-iw-LuQ" id="fuq-O3-Wln"/>
                         <outlet property="btnProsto" destination="Xss-EQ-N9X" id="yOA-Lh-ZnN"/>

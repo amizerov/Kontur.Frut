@@ -10,25 +10,22 @@ import Foundation
 
 //public let api = ApiService()
 public class ApiService {
-    
+
+    private let apiUrl = "https://frutwebapi.svr.vc/api"
+
     init() {
         
     }
     
-    private let loginUrl = "https://frutwebapi.svr.vc/api/Login"
-    public var loginDone: ((_ loginResult: Data) -> ())?
-    
-    public func DoLogin(_ lgn: String, _ pwd: String) {
-        if let url = URL(string: loginUrl + "?lgn=\(lgn)&pwd=\(pwd)") {
+    public func DoLogin(_ lgn: String, _ pwd: String, loginDone: @escaping (Data) -> Void) {
+        if let url = URL(string: apiUrl + "/Login?lgn=\(lgn)&pwd=\(pwd)") {
            URLSession.shared.dataTask(with: url) { data, response, error in
               if let data = data {
-                self.loginDone?(data)
+                loginDone(data)
               }
            }.resume()
         }
     }
-    
-    private let apiUrl = "https://frutwebapi.svr.vc/api"
     
     public var gotHistory: ((_ data: Data) -> ())?
     public func GetHistory(_ id_oplata: Int) {
@@ -96,4 +93,13 @@ public class ApiService {
         }
     }
 
+    public func GetBalances(completion: @escaping (Data) -> Void) {
+        if let url = URL(string: apiUrl + "/Balances") {
+           URLSession.shared.dataTask(with: url) { data, response, error in
+              if let data = data {
+                completion(data)
+              }
+           }.resume()
+        }
+    }
 }

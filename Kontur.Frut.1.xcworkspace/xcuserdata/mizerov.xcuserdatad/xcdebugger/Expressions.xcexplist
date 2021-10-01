@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "LoginVC.btnLoginClick(_:):LoginVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "api">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #4 in MainVC.prepare(for:sender:):MainVC.swift">
       </ContextState>
       <ContextState
@@ -22,10 +30,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "NewOplVC.btnSaveClicked(_:):NewOplVC.swift">
+         contextName = "Balances.init(_:):Balance.swift">
          <PersistentStrings>
             <PersistentString
-               value = "lblProcent.text">
+               value = "arr">
+            </PersistentString>
+            <PersistentString
+               value = "str.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -37,6 +48,14 @@
             </PersistentString>
             <PersistentString
                value = "String(data: data, encoding: .utf8)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NewOplVC.btnSaveClicked(_:):NewOplVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lblProcent.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -65,6 +84,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in closure #1 in StartVC.prepare(for:sender:):StartVC.swift">
+      </ContextState>
+      <ContextState
          contextName = "NewOplVC.validateFields():NewOplVC.swift">
          <PersistentStrings>
             <PersistentString
@@ -76,7 +98,7 @@
          contextName = "Oplata.Save():Oplata.swift">
          <PersistentStrings>
             <PersistentString
-               value = "imagep.count">
+               value = "imagep">
             </PersistentString>
             <PersistentString
                value = "procen">
@@ -85,7 +107,7 @@
                value = "summap">
             </PersistentString>
             <PersistentString
-               value = "imagep">
+               value = "imagep.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

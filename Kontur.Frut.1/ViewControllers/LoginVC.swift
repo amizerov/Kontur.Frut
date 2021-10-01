@@ -26,8 +26,7 @@ class LoginVC: UIViewController {
     
     @IBAction func btnLoginClick(_ sender: UIButton) {
         
-        api.DoLogin(txtLogin.text!, txtPassword.text!)
-        api.loginDone = { loginResult in
+        api.DoLogin(txtLogin.text!, txtPassword.text!) { loginResult in
             
             self.login.Load(from: loginResult)
 

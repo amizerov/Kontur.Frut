@@ -27,6 +27,8 @@
 		23819C9A26480482006FF334 /* StructFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9926480481006FF334 /* StructFilter.swift */; };
 		23819C9C26494018006FF334 /* PosrPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9B26494018006FF334 /* PosrPopUpVC.swift */; };
 		23819C9E2649402F006FF334 /* FirmPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23819C9D2649402F006FF334 /* FirmPopUpVC.swift */; };
+		23AA9B8E2705E90C005BE5AE /* BalancesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA9B8D2705E90C005BE5AE /* BalancesVC.swift */; };
+		23AA9B9027060E3D005BE5AE /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA9B8F27060E3D005BE5AE /* Balance.swift */; };
 		23AF2ECD2635A3850065035F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ECC2635A3850065035F /* AppDelegate.swift */; };
 		23AF2ECF2635A3850065035F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ECE2635A3850065035F /* SceneDelegate.swift */; };
 		23AF2ED12635A3850065035F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF2ED02635A3850065035F /* MainVC.swift */; };
@@ -63,6 +65,8 @@
 		23819C9926480481006FF334 /* StructFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructFilter.swift; sourceTree = "<group>"; };
 		23819C9B26494018006FF334 /* PosrPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosrPopUpVC.swift; sourceTree = "<group>"; };
 		23819C9D2649402F006FF334 /* FirmPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirmPopUpVC.swift; sourceTree = "<group>"; };
+		23AA9B8D2705E90C005BE5AE /* BalancesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancesVC.swift; sourceTree = "<group>"; };
+		23AA9B8F27060E3D005BE5AE /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		23AF2EC92635A3850065035F /* Kontur.Frut.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kontur.Frut.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23AF2ECC2635A3850065035F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23AF2ECE2635A3850065035F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				23FE4F732670FAB10056EDFA /* HistoryTVC.swift */,
 				237E7DD02677567D009FCC07 /* NewOplVC.swift */,
 				233ABC6F2691C236009D1CA9 /* PictOrderVC.swift */,
+				23AA9B8D2705E90C005BE5AE /* BalancesVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				23F3CA3C264FC02600DC2A96 /* StructLogin.swift */,
 				230D39F4267B93710058148B /* Posrednik.swift */,
 				230D3A00268081840058148B /* Oplata.swift */,
+				23AA9B8F27060E3D005BE5AE /* Balance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,9 +325,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23FE4F782675076D0056EDFA /* Progress.swift in Sources */,
+				23AA9B8E2705E90C005BE5AE /* BalancesVC.swift in Sources */,
 				23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */,
 				23AF2ED12635A3850065035F /* MainVC.swift in Sources */,
 				23819C982647DB1A006FF334 /* DatePopupVC.swift in Sources */,
+				23AA9B9027060E3D005BE5AE /* Balance.swift in Sources */,
 				230D39F9267B9E850058148B /* MyArray.swift in Sources */,
 				237E7DD12677567D009FCC07 /* NewOplVC.swift in Sources */,
 				230D39F5267B93720058148B /* Posrednik.swift in Sources */,
@@ -494,7 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = QQB4FNYPXN;
 				INFOPLIST_FILE = Kontur.Frut.1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -502,7 +510,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "uz.Kontur-Frut-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -517,7 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEVELOPMENT_TEAM = QQB4FNYPXN;
 				INFOPLIST_FILE = Kontur.Frut.1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -525,7 +533,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "uz.Kontur-Frut-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
