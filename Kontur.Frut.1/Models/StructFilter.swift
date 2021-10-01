@@ -21,17 +21,30 @@ class Filter {
     
     var UrlString: String {
         get {
-            return FilterToUrlString(self)
+            return FilterToUrlString()
         }
+    }
+    
+    func FilterToUrlString() -> String {
+        
+        var url = ""
+        
+        let df = DateFormatter()
+        df.dateFormat = "yyyyMMdd"
+        let from = df.string(from: ByDate.DateFrom)
+        let to = df.string(from: ByDate.DateTo)
+        url = ApiUrlString + "?From=\(from)&To=\(to)&Posr_Id=\(ByPosr.ID)"
+        
+        return url
     }
 }
 
 class FilterDate {
-    var DateFrom: Date = Date() - defTimeInterval
-    var DateTo: Date = Date()
+    var DateFrom = ISO8601DateFormatter().date(from: "2021-01-01T00:00:00+0000")! //Date() - defTimeInterval
+    var DateTo = Date()
     
     public func Clear() {
-        DateFrom = Date() - defTimeInterval
+        DateFrom = ISO8601DateFormatter().date(from: "2021-01-01T00:00:00+0000")! //Date() - defTimeInterval
         DateTo = Date()
     }
 }

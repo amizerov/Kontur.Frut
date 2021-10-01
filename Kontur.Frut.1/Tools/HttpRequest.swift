@@ -73,15 +73,3 @@ func Post(body: [String: Any], completion: @escaping (_ id: Int) -> ())
     task.resume()
 }
 
-func FilterToUrlString(_ f: Filter) -> String {
-    
-    var url = ""
-    
-    let df = DateFormatter()
-    df.dateFormat = "yyyyMMdd"
-    let from = df.string(from: f.ByDate.DateFrom)
-    let to = df.string(from: f.ByDate.DateTo)
-    url = ApiUrlString + "?From=" + from + "&To=" + to
-    
-    return url
-}

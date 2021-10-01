@@ -34,15 +34,42 @@ class BalancesVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceCell")
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceCell") as! BalanceTVC
         let b = bals.arr[indexPath.row]
         
-        var str = ""
-        if(b.Rub > 0) { str = "\(b.Rub) Рублей" }
-        if(b.Dol > 0) { str = "\(b.Dol) Долларов" }
-
-        cell?.textLabel?.text = b.Name + "  Баланс: " + str
+        cell.lblPosred.text = b.Name
+        cell.lblDate.text = b.dtc
+        cell.lblBalTop.text = b.Rub > 0 ? "\(b.Rub)" : "\(b.Dol)"
+        cell.lblBalBot.text = b.Rub > 0 ? "Рублей" : "Долларов"
         
-        return cell!
+        cell.backgroundColor = indexPath.row % 2 == 0 ? #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if login.Role == 0 {
+            return
+        }
+        // При нажатии на ячейку баланса посредника, переходим на список операций этого посредника
+        if let mvc = storyboard?
+            .instantiateViewController(identifier: "MainVC") as? MainVC
+        {
+            let filter = Filter()
+            filter.ByPosr.Name = bals.arr[indexPath.row].Name
+            filter.ByPosr.ID = bals.arr[indexPath.row].ID
+            mvc.filter = filter
+            mvc.login = login
+                
+            self.navigationController?.pushViewController(mvc, animated: true)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is MainVC {
+            let mvc = segue.destination as? MainVC
+            mvc?.login = login
+        }
     }
 }

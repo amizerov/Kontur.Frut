@@ -95,10 +95,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "Filter.FilterToUrlString():StructFilter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ByPosr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "Oplata.Save():Oplata.swift">
          <PersistentStrings>
             <PersistentString
-               value = "imagep">
+               value = "imagep.count">
             </PersistentString>
             <PersistentString
                value = "procen">
@@ -107,12 +115,20 @@
                value = "summap">
             </PersistentString>
             <PersistentString
-               value = "imagep.count">
+               value = "imagep">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "static RowData.GetIntValue(_:):StructRow.swift">
+      </ContextState>
+      <ContextState
+         contextName = "static Change.GetDateValue(_:):HistoryTVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "a">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "closure #1 in Posreds.init(fromData:):Posrednik.swift">

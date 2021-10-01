@@ -38,6 +38,7 @@
 		23BB1C362664F96600749964 /* TODO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 23BB1C352664F96600749964 /* TODO.rtf */; };
 		23CCB807265547DE003DC475 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCB806265547DE003DC475 /* ApiService.swift */; };
 		23CCB8092656C42A003DC475 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CCB8082656C42A003DC475 /* DesignableView.swift */; };
+		23F2A5612706DDA10066C41E /* BalanceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A5602706DDA10066C41E /* BalanceTVC.swift */; };
 		23F3CA3B264FB4D400DC2A96 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */; };
 		23F3CA3D264FC02600DC2A96 /* StructLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F3CA3C264FC02600DC2A96 /* StructLogin.swift */; };
 		23FE4F742670FAB10056EDFA /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FE4F732670FAB10056EDFA /* HistoryTVC.swift */; };
@@ -78,6 +79,7 @@
 		23BB1C352664F96600749964 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
 		23CCB806265547DE003DC475 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		23CCB8082656C42A003DC475 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		23F2A5602706DDA10066C41E /* BalanceTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTVC.swift; sourceTree = "<group>"; };
 		23F3CA3A264FB4D400DC2A96 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		23F3CA3C264FC02600DC2A96 /* StructLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructLogin.swift; sourceTree = "<group>"; };
 		23FE4F732670FAB10056EDFA /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				237E7DD02677567D009FCC07 /* NewOplVC.swift */,
 				233ABC6F2691C236009D1CA9 /* PictOrderVC.swift */,
 				23AA9B8D2705E90C005BE5AE /* BalancesVC.swift */,
+				23F2A5602706DDA10066C41E /* BalanceTVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				23805D4F26502D67002299F0 /* StartVC.swift in Sources */,
 				233ABC6E268D026C009D1CA9 /* PostImage.swift in Sources */,
 				230D39FF267BAC3D0058148B /* Naznach.swift in Sources */,
+				23F2A5612706DDA10066C41E /* BalanceTVC.swift in Sources */,
 				230F81F32640023E00F2E925 /* HttpRequest.swift in Sources */,
 				230D39FC267BA85D0058148B /* Contragent.swift in Sources */,
 				230F81E9263BE33D00F2E925 /* DetailsVC.swift in Sources */,
@@ -502,7 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QQB4FNYPXN;
 				INFOPLIST_FILE = Kontur.Frut.1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -510,7 +514,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.3;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "uz.Kontur-Frut-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -525,7 +529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QQB4FNYPXN;
 				INFOPLIST_FILE = Kontur.Frut.1/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -533,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.3;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "uz.Kontur-Frut-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

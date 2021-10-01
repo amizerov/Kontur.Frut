@@ -33,13 +33,13 @@ struct Change {
         
         var  r = Change()
         
-        r.dtc = GetDateValue(a[0])
-        r.fld = GetStrValue(a[1])
-        r.old = GetStrValue(a[2])
-        
-        r.new = GetStrValue(a[3])
-        r.usr = GetStrValue(a[4])
-        
+        if(a.count == 5) {
+            r.dtc = GetDateValue(a[0])
+            r.fld = GetStrValue(a[1])
+            r.old = GetStrValue(a[2])
+            r.new = GetStrValue(a[3])
+            r.usr = GetStrValue(a[4])
+        }
         return r
     }
     static func GetStrValue(_ s: String) -> String
@@ -53,7 +53,9 @@ struct Change {
         return res
     }
     static func GetDateValue(_ s: String) -> Date {
-        var isoDate = s.components(separatedBy: ":\"")[1]
+        let a = s.components(separatedBy: ":\"")
+        if(a.count < 2) { return Date() }
+        var isoDate = a[1]
         isoDate = isoDate.replacingOccurrences(of: "\"", with: "")
         isoDate = isoDate.replacingOccurrences(of: "T", with: " ")
         isoDate = isoDate.padding(toLength: 16, withPad: "", startingAt: 0)

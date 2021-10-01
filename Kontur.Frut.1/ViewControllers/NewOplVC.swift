@@ -46,7 +46,7 @@ class NewOplVC: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        txtPosr.text = "Агил"
+        txtPosr.text = "АКИФ"
         txtNomer.text = "000"
         txtSumma.text = "1000000"
         txtFirma.text = "ООО \"МР-Трайдинг\""
