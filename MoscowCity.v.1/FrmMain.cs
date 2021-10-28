@@ -144,26 +144,81 @@ namespace Frut
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var clt = new RestClient("http://178.63.3.165/MobileAPI/");
-            var req = new RestRequest("hs/RCB/Report", DataFormat.Json);
+            var clt = new RestClient("http://frut.asd.vc/Sales/hs/RCB/Report");
+            var req = new RestRequest("/Stocks", DataFormat.Json);
             var result = clt.Execute(req);
             string js = result.Content;
             dynamic jo = SimpleJson.DeserializeObject(js);
             foreach (var o in jo)
             {
-                var n = o.name;
-                var r = o.CashRub?.ToString().Replace(',', '.');
-                var d = o.CashDoll?.ToString().Replace(',', '.');
-                G.db_exec($"SetPosred '{n}', {r??0}, {d??0}");
+                var n = o.broker;
+                double s = 0;
+                bool r = true;
+                foreach (var d in o.data)
+                {
+                    s += d.balance;
+                    r = d.currency == "RUB";
+                }
+                string sum = s.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
+                G.db_exec($"SetPosred '{n}', {(r ? sum : "0")}, {(r ? "0" : sum)}");
             }
 
-            timer1.Enabled = true;
-            timer1.Start();
+            if (!timer1.Enabled)
+            {
+                timer1.Enabled = true;
+                timer1.Start();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             barButtonItem3_ItemClick(null, null);
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var clt = new RestClient("http://mr1c.asd.vc/Sales/hs/RCB/Report");
+            DataTable dt = G.db_select("select [Name] from Posrednik");
+            foreach(DataRow r in dt.Rows)
+            {
+                var req = new RestRequest("RP", DataFormat.Json);
+                DateTime now = DateTime.Now;
+                req.AddParameter("StartDate", now.AddDays(-7).ToString("yyyyMMdd"));
+                req.AddParameter("EndDate", now.AddDays(1).ToString("yyyyMMdd"));
+                string broker = G._S(r);
+                req.AddParameter("Broker", broker);
+                var result = clt.Execute(req);
+                string js = result.Content;
+                dynamic jo = SimpleJson.DeserializeObject(js);
+                if (jo.Count > 0 && jo[0].broker == broker)
+                {
+                    foreach (var o in jo[0].data)
+                    {
+                        var date = o.date;
+                        var orga = o.organization;
+                        var rems = o.remaining_start.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
+                        var comi = o.coming.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
+                        var cons = o.consumption.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
+                        var reme = o.remaining_end.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
+                        var curr = o.currency;
+                        DateTime dd = DateTime.Parse(date, null, System.Globalization.DateTimeStyles.RoundtripKind);
+                        date = dd.ToString("yyyyMMdd HH:mm:ss");
+
+                        G.db_exec($"SetOper '{broker}', '{date}', '{orga}', '{curr}', {rems}, {comi}, {cons}, {reme}");
+                    }
+                }
+            }
+
+            if (!timer2.Enabled)
+            {
+                timer2.Enabled = true;
+                timer2.Start();
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            barButtonItem4_ItemClick(null, null);
         }
     }
 }

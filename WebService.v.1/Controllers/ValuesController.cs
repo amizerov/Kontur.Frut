@@ -14,9 +14,9 @@ namespace WebService.v._1.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public JArray Get(string from = "", string to = "")
+        public JArray Get(string from = "", string to = "", int Posr_Id = 0)
         {
-            DataTable dt = G.db_select($"GetOplatas '{from}', '{to}'");
+            DataTable dt = G.db_select($"GetOplatas '{from}', '{to}', {Posr_Id}");
             if (G.CheckDB())
                 return JsonHelper.ToJson(dt);
             else
