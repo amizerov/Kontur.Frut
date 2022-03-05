@@ -176,6 +176,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NaznachController.cs" />
     <Compile Include="Controllers\NewOplaController.cs" />
+    <Compile Include="Controllers\OperationsController.cs" />
     <Compile Include="Controllers\PicorController.cs" />
     <Compile Include="Controllers\PosrController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

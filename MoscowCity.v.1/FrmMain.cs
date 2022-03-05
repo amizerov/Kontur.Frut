@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using am.BL;
 using RestSharp;
+using RestSharp.Authenticators;
 
 namespace Frut
 {
@@ -88,7 +89,7 @@ namespace Frut
 
         private void gvMain_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
                 btnEdit_ItemClick(null, null);
         }
 
@@ -144,7 +145,9 @@ namespace Frut
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var clt = new RestClient("http://frut.asd.vc/Sales/hs/RCB/Report");
+            // Остатки у посредников
+            var clt = new RestClient("http://progerx.svr.vc/Sales/hs/RCB/Report");
+            clt.Authenticator = new HttpBasicAuthenticator("mobile", "1cultrazoom21");
             var req = new RestRequest("/Stocks", DataFormat.Json);
             var result = clt.Execute(req);
             string js = result.Content;
@@ -177,9 +180,11 @@ namespace Frut
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var clt = new RestClient("http://mr1c.asd.vc/Sales/hs/RCB/Report");
+            // Операции посредника
+            var clt = new RestClient("http://progerx.svr.vc/Sales/hs/RCB/Report");
+            clt.Authenticator = new HttpBasicAuthenticator("mobile", "1cultrazoom21");
             DataTable dt = G.db_select("select [Name] from Posrednik");
-            foreach(DataRow r in dt.Rows)
+            foreach (DataRow r in dt.Rows)
             {
                 var req = new RestRequest("RP", DataFormat.Json);
                 DateTime now = DateTime.Now;
@@ -219,6 +224,45 @@ namespace Frut
         private void timer2_Tick(object sender, EventArgs e)
         {
             barButtonItem4_ItemClick(null, null);
+            barButtonItem5_ItemClick(null, null);
+
+            barButtonItem3_ItemClick(null, null);
+
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            // Долларывые операции с подробностями по машинам
+            var clt = new RestClient("http://progerx.svr.vc/Sales/hs/RCB/Report");
+            clt.Authenticator = new HttpBasicAuthenticator("mobile", "1cultrazoom21");
+            var req = new RestRequest("CarsInfo", DataFormat.Json);
+            DateTime now = DateTime.Now;
+            req.AddParameter("StartDate", now.AddDays(-7).ToString("yyyyMMdd"));
+            req.AddParameter("EndDate", now.AddDays(1).ToString("yyyyMMdd"));
+            var result = clt.Execute(req);
+            string js = result.Content;
+            dynamic jo = SimpleJson.DeserializeObject(js);
+
+            if (jo.Count > 0)
+            {
+                foreach (var o in jo)
+                {
+                    string date = o.documentdate;
+                    date = date.Replace("T", " ").Substring(0, 19);
+                    var numb = o.documentnumber;
+
+                    var d = o.data;
+                    var n = d.carnumber;
+                    var i = d.invoice;
+                    var t = d.terminal;
+                    var p = d.product;
+                    string w = d.weight.ToString(); w = w.Replace(",", ".");
+                    string s = d.checkout.ToString(); s = s.Replace(",", ".");
+
+                    G.db_exec($"SetCar '{date}', {numb}, '{n}', '{i}', '{t}', '{p}', '{w}', '{s}'");
+                }
+            }
+
         }
     }
 }
