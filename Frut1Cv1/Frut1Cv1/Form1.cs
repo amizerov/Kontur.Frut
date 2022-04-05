@@ -25,6 +25,7 @@ namespace Frut1Cv1
 
             Loader.OnProgress += Log;
             Loader.OnComplete += Log;
+            Loader.OnError += Log;
 
             timer1.Start();
         }

@@ -13,7 +13,8 @@ namespace Frut1Cv1
         { 
         }
 
-        public DbSet<Оплата> Оплаты { get; set; } 
+        public DbSet<Оплата> Оплаты { get; set; }
+        public DbSet<Вагон> Вагоны { get; set; }
         public DbSet<Машина> Машины { get; set; }
         public DbSet<Товар> Товары { get; set; }
     }

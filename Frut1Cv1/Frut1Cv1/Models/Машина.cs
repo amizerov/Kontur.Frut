@@ -13,7 +13,7 @@ namespace Frut1Cv1
     {
 		[Key]
 		public int ID { get; set; }
-		public string Номер { get; set; }
+		public int Номер { get; set; }
 		public DateTime Дата { get; set; }
 		public string Посредник { get; set; }
 		public string Контракт { get; set; }
@@ -32,41 +32,58 @@ namespace Frut1Cv1
 		public string Организация { get; set; }
 		public string НоменклатураВДокумента { get; set; }
 		public string КраткаяИнформация { get; set; }
+		public double Курс { get; set; }
 
-		public void Save()
-		{
-			Машина m = this;
-			using (FrutDB db = new FrutDB()) //Создание подключения
+		public Машина(dynamic машина)
+        {
+			Номер = int.Parse(машина.Номер);
+			Дата = машина.Дата;
+			Посредник = машина.Посредник.Наименование;
+			Контракт = машина.Контракт.Наименование;
+			Пользователь = машина.Пользователь.Наименование;
+			Терминал = машина.Терминал.Наименование;
+			НомерМашины = машина.НомерМашины;
+			ДТ = машина.ДТ;
+			ТаможеннаяДекларация = машина.ТаможеннаяДекларация;
+			НомерИнвойса = машина.НомерИнвойса;
+			Касса = машина.Касса.Наименование;
+			ДатаДТ = машина.ДатаДТ < DateTime.MinValue ? DateTime.MinValue : машина.ДатаДТ;
+			Комментарий = машина.Комментарий;
+			ТипРасчетаПоРубКассе = машина.ТипРасчетаПоРубКассе;
+			СуммаСЗП = машина.СуммаСЗП;
+			ТипРасчетаПоДолларКассе = машина.ТипРасчетаПоДолларКассе;
+			Организация = машина.Организация.Наименование;
+			НоменклатураВДокумента = машина.НоменклатураВДокумента;
+			КраткаяИнформация = машина.КраткаяИнформация;
+
+			var s = КраткаяИнформация;
+			var i = s.IndexOf("КУРС: ") + 6;
+			if (i > 20)
 			{
-				if (!db.Машины.Any(м => м.Номер == Номер))
+				var j = s.IndexOf(',', i);
+				if (j > i)
 				{
-					db.Машины.Add(m);
-					db.SaveChanges();
+					s = s.Substring(i, j - i + 3);
+					Курс = Double.Parse(s);
 				}
 			}
 		}
-	}
-
-	[Table("Товары")]
-	public class Товар
-    {
-		[Key]
-		public int ID { get; set; }
-		public int CAR_ID { get; set; }
-		public string Номенклатура { get; set; }
-		public double Сумма { get; set; }
-		public double СуммаРастоможки { get; set; }
-		public double СуммаУслуги { get; set; }
-		public double СуммаСкидки { get; set; }
-		public double Штраф { get; set; }
-		public double ИтогоПоКассе { get; set; }
-
 		public void Save()
 		{
 			using (FrutDB db = new FrutDB()) //Создание подключения
 			{
-				db.Товары.Add(this);
-				db.SaveChanges();
+				try
+				{
+					if (!db.Машины.Any(м => м.Номер == Номер))
+					{
+						db.Машины.Add(this);
+						db.SaveChanges();
+					}
+				}
+				catch (Exception ex)
+                {
+					Console.WriteLine(ex.ToString());
+                }
 			}
 		}
 	}
