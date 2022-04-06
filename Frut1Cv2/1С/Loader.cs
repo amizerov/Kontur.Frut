@@ -15,6 +15,14 @@ namespace Frut1Cv2
         }
 		static void DoWork()
 		{
+			OnProgress?.Invoke("Грузим остатки", 0);
+			Остатки.Load();
+			OnProgress?.Invoke("Ок", 0);
+			Thread.Sleep(1000);
+			OnProgress?.Invoke("Грузим операции", 0);
+			Операта.Load();
+			OnProgress?.Invoke("Ок", 0);
+
 			try { LoadOplata(); }
 			catch (Exception ex) { OnError?.Invoke("Оплата ошибка: " + ex.ToString()); }
 			try { LoadVagons(); }

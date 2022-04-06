@@ -10,6 +10,8 @@ namespace Frut1Cv2
         {
             Text += Application.ProductVersion;
 
+            am.DB.DBManager.Instance.Init(FrutDB.ConnectionString);
+
             Com1C.OnConnect += Log;
             Com1C.OnError += Log2;
 
@@ -27,6 +29,7 @@ namespace Frut1Cv2
 
             if (!Com1C.IsConnected)
             {
+                Log("Подключение к 1С ... ... ...");
                 string ConnectionString = "File='D:\\Sales';Usr='mobile';Pwd='1cultrazoom21'";
                 Com1C.ConnectTo1C(ConnectionString);
             }
@@ -54,7 +57,7 @@ namespace Frut1Cv2
             Invoke(new Action(() => {
                 txtLog.Text = DateTime.Now.ToString("hh:mm:ss") + " - " + s + "\r\n" + txtLog.Text;
                 if(i > 0)
-                    txtLog1.Text = DateTime.Now.ToString("hh:mm:ss") + " - " + s + "\r\n" + txtLog2.Text;
+                    txtLog1.Text = DateTime.Now.ToString("hh:mm:ss") + " - " + s + "\r\n" + txtLog1.Text;
             }));
         }
         void Log2(string s)

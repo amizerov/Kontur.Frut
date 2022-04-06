@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frut1Cv2", "Frut1Cv2.csproj", "{0DF0DF87-932B-4BA0-B4CF-5AEC9118FAAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "amGlobals", "..\amGlobals\amGlobals.csproj", "{A69600FB-8789-4A7F-AED7-F22B6AEE9AB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Designer|Any CPU = Designer|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DF0DF87-932B-4BA0-B4CF-5AEC9118FAAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF0DF87-932B-4BA0-B4CF-5AEC9118FAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF0DF87-932B-4BA0-B4CF-5AEC9118FAAE}.Designer|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF0DF87-932B-4BA0-B4CF-5AEC9118FAAE}.Designer|Any CPU.Build.0 = Debug|Any CPU
+		{0DF0DF87-932B-4BA0-B4CF-5AEC9118FAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF0DF87-932B-4BA0-B4CF-5AEC9118FAAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A69600FB-8789-4A7F-AED7-F22B6AEE9AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69600FB-8789-4A7F-AED7-F22B6AEE9AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69600FB-8789-4A7F-AED7-F22B6AEE9AB3}.Designer|Any CPU.ActiveCfg = Designer|Any CPU
+		{A69600FB-8789-4A7F-AED7-F22B6AEE9AB3}.Designer|Any CPU.Build.0 = Designer|Any CPU
+		{A69600FB-8789-4A7F-AED7-F22B6AEE9AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69600FB-8789-4A7F-AED7-F22B6AEE9AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F0ED165-8AE8-4F39-867F-ED3C3C7A118A}
+	EndGlobalSection
+EndGlobal

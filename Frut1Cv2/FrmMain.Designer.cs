@@ -35,8 +35,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtLog1 = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtLog2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -57,9 +57,9 @@
             // btnStart
             // 
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStart.Location = new System.Drawing.Point(491, 12);
+            this.btnStart.Location = new System.Drawing.Point(318, 9);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(91, 63);
+            this.btnStart.Size = new System.Drawing.Size(124, 25);
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Начать загрузку";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -78,10 +78,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(463, 671);
+            this.tabControl1.Size = new System.Drawing.Size(433, 661);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -106,24 +106,25 @@
             this.tabPage2.Text = "Загруженные";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.txtLog2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(455, 643);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Ошибки";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // txtLog1
             // 
             this.txtLog1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtLog1.Location = new System.Drawing.Point(3, 3);
             this.txtLog1.Multiline = true;
             this.txtLog1.Name = "txtLog1";
+            this.txtLog1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtLog1.Size = new System.Drawing.Size(449, 637);
             this.txtLog1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.txtLog2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(425, 633);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Ошибки";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // txtLog2
             // 
@@ -131,16 +132,17 @@
             this.txtLog2.Location = new System.Drawing.Point(0, 0);
             this.txtLog2.Multiline = true;
             this.txtLog2.Name = "txtLog2";
-            this.txtLog2.Size = new System.Drawing.Size(455, 643);
+            this.txtLog2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtLog2.Size = new System.Drawing.Size(425, 633);
             this.txtLog2.TabIndex = 0;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 677);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(460, 677);
             this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.tabControl1);
             this.Name = "FrmMain";
             this.Text = "Остатки!!, Оплаты, Машины, Вагоны - Версия:";
             this.Load += new System.EventHandler(this.Form1_Load);

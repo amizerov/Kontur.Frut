@@ -12,7 +12,7 @@
 	  <Description>Frut Server 1C loader</Description>
 	  <Product>Frut Server by Mizer</Product>
 	  <AssemblyTitle>Frut Server</AssemblyTitle>
-	  <Version>1.0.0.1</Version>
+	  <Version>1.0.0.6</Version>
 	  
   </PropertyGroup>
 
@@ -31,6 +31,13 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="107.3.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\amGlobals\amGlobals.csproj" />
   </ItemGroup>
 
   <ItemGroup>
