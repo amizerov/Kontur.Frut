@@ -13,9 +13,10 @@ namespace WebService.v._1.Controllers
     public class MashinosyController : ApiController
     {
         // GET: Operations
-        public JArray Get(string from = "", string to = "", int Posr_Id = 0)
+        public JArray Get(string from = "", string to = "", int Posr_Id = 0, bool vago = false)
         {
-            DataTable dt = G.db_select($"GetMashinosy {Posr_Id}, '{from}', '{to}'");
+            string sql = vago ? "GetVagonosy" : "GetMashinosy";
+            DataTable dt = G.db_select($"{sql} {Posr_Id}, '{from}', '{to}'");
             if (G.CheckDB())
                 return JsonHelper.ToJson(dt);
             else

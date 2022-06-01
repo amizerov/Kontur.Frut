@@ -8,7 +8,7 @@ namespace Frut1Cv2
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            Text += Application.ProductVersion;
+            Text = Application.ProductName + "  v." + Application.ProductVersion;
 
             am.DB.DBManager.Instance.Init(FrutDB.ConnectionString);
 
@@ -70,7 +70,7 @@ namespace Frut1Cv2
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            btnStart_Click(null, null);
+            btnStart_Click(sender, e);
         }
     }
 }

@@ -45,9 +45,9 @@ namespace Frut1Cv2
 			{
 				try
 				{
-					if (!db.Оплаты.Where(o => o.Номер == Номер).Any())
+					if (!db.Оплаты!.Where(o => o.Номер == Номер).Any())
 					{
-						db.Оплаты.Add(this);
+						db.Оплаты!.Add(this);
 						db.SaveChanges();
 					}
 				}

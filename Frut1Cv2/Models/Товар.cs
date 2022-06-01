@@ -21,6 +21,7 @@ namespace Frut1Cv2
 		public double СуммаРастоможки { get; set; }
 		public double СуммаУслуги { get; set; }
 		public double СуммаСкидки { get; set; }
+		public double Курс { get; set; }
 		public double Штраф { get; set; }
 		public double ИтогоПоКассе { get; set; }
 
@@ -28,6 +29,7 @@ namespace Frut1Cv2
 		{
 			CAR_ID = car_id;
 			VAG_ID = vag_id;
+			Курс = vag_id > 0 ? t.Курс : 0;
 			Сумма = t.Сумма;
 			Номенклатура = t.Номенклатура.Наименование;
 			СуммаРастоможки = t.СуммаРастоможки;
@@ -38,7 +40,7 @@ namespace Frut1Cv2
 
 			using (FrutDB db = new FrutDB()) //Создание подключения
 			{
-				db.Товары.Add(this);
+				db.Товары!.Add(this);
 				db.SaveChanges();
 			}
 		}

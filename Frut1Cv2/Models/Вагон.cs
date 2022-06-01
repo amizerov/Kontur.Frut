@@ -37,6 +37,7 @@ namespace Frut1Cv2
         public string? Организация { get; set; }
         public bool ОплаченУслуга { get; set; }
         public string? НоменклатураВДокумента { get; set; }
+        public double Курс { get; set; }
 
         public void Load(dynamic вагон)
         {
@@ -64,6 +65,13 @@ namespace Frut1Cv2
             Организация = вагон.Организация.Наименование;
             ОплаченУслуга = вагон.ОплаченУслуга;
             НоменклатураВДокумента = вагон.НоменклатураВДокумента;
+            int i = 0; var tt = вагон.товары;
+            foreach(var t in tt)
+            {
+                i++;
+                Курс += t.Курс;
+            }
+            Курс = Курс / i;
         }
         public void Save()
         {
@@ -71,9 +79,9 @@ namespace Frut1Cv2
             {
                 try
                 {
-                    if (!db.Вагоны.Any(в => в.Номер == Номер))
+                    if (!db.Вагоны!.Any(в => в.Номер == Номер))
                     {
-                        db.Вагоны.Add(this);
+                        db.Вагоны!.Add(this);
                         db.SaveChanges();
                     }
                 }

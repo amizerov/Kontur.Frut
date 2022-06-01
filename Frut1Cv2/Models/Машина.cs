@@ -1,4 +1,5 @@
-﻿using System;
+﻿using am.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,7 +11,7 @@ namespace Frut1Cv2
     {
 		[Key]
 		public int ID { get; set; }
-		public int Номер { get; set; }
+		public string? Номер { get; set; }
 		public DateTime Дата { get; set; }
 		public string? Посредник { get; set; }
 		public string? Контракт { get; set; }
@@ -33,7 +34,7 @@ namespace Frut1Cv2
 
 		public void Load(dynamic машина)
         {
-			Номер = int.Parse(машина.Номер);
+			Номер = машина.Номер;
 			Дата = машина.Дата;
 			Посредник = машина.Посредник.Наименование;
 			Контракт = машина.Контракт.Наименование;
@@ -61,7 +62,7 @@ namespace Frut1Cv2
 				if (j > i)
 				{
 					s = s.Substring(i, j - i + 3);
-					Курс = Double.Parse(s);
+					Курс = G._Double(s);
 				}
 			}
 		}
@@ -71,9 +72,9 @@ namespace Frut1Cv2
 			{
 				try
 				{
-					if (!db.Машины.Any(м => м.Номер == Номер))
+					if (!db.Машины!.Any(м => м.Номер == Номер))
 					{
-						db.Машины.Add(this);
+						db.Машины!.Add(this);
 						db.SaveChanges();
 					}
 				}
