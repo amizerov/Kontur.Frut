@@ -62,7 +62,8 @@ namespace Frut1Cv2
 				if (j > i)
 				{
 					s = s.Substring(i, j - i + 3);
-					Курс = G._Double(s);
+					double k; double.TryParse(s, out k);
+					Курс = k;
 				}
 			}
 		}
