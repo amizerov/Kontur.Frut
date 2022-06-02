@@ -56,6 +56,7 @@ namespace Frut1Cv2
 			}
 		}
 
+		static void MashinaError(string msg) => OnError?.Invoke(msg);
 		private static void LoadMashin()
         {
 			DateTime date = DateTime.Now;
@@ -66,6 +67,7 @@ namespace Frut1Cv2
 			{
 				try { 
 					Машина m = new Машина();
+					m.OnError += MashinaError;
 					m.Load(машина);
 					m.Save();
 

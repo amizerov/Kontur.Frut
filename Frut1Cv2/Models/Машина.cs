@@ -9,6 +9,8 @@ namespace Frut1Cv2
 	[Table("Машины")]
 	public class Машина
     {
+		public event Action<string>? OnError;
+
 		[Key]
 		public int ID { get; set; }
 		public string? Номер { get; set; }
@@ -62,8 +64,9 @@ namespace Frut1Cv2
 				if (j > i)
 				{
 					s = s.Substring(i, j - i + 3);
-					double k; double.TryParse(s, out k);
-					Курс = k;
+
+					double k = 0; double.TryParse(s, out k); Курс = k;
+					if (k == 0) OnError?.Invoke("Курс: " + s);
 				}
 			}
 		}
