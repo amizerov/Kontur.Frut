@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading;
-using V83;
+﻿using V83;
 
 namespace Frut1Cv2
 {

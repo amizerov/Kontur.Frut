@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace Frut1Cv2
+﻿namespace Frut1Cv2
 {
     public class Loader
     {
