@@ -56,18 +56,33 @@ namespace Frut1Cv2
 			НоменклатураВДокумента = машина.НоменклатураВДокумента;
 			КраткаяИнформация = машина.КраткаяИнформация;
 
-			var s = КраткаяИнформация;
-			var i = s.IndexOf("КУРС: ") + 6;
-			if (i > 20)
+			string s = КраткаяИнформация; ;
+			int i = s.IndexOf("КУРС: ") + 6;
+			int j, jj;
+			try
 			{
-				var j = s.IndexOf(',', i);
-				if (j > i)
+				if (i > 20)
 				{
-					s = s.Substring(i, j - i + 3);
+					j = s.IndexOf(',', i);
+					jj = s.IndexOf('\n', i);
+					j = j > 0 && j < jj ? j + 3 : jj;
 
-					double k = 0; double.TryParse(s, out k); Курс = k;
-					if (k == 0) OnError?.Invoke("Курс: " + s);
+					if (j > i)
+					{
+						s = s.Substring(i, j - i);
+
+						double k = 0; 
+						double.TryParse(s, out k); 
+						if (k == 0) 
+							OnError?.Invoke("Курс: " + s);
+						else
+							Курс = k;
+					}
 				}
+			}
+			catch(Exception ex)
+            {
+				OnError?.Invoke("Error Машина.Load: " + ex.Message);
 			}
 		}
 		public void Save()
@@ -84,8 +99,8 @@ namespace Frut1Cv2
 				}
 				catch (Exception ex)
                 {
-					Console.WriteLine(ex.ToString());
-                }
+					OnError?.Invoke("Error Машина.Save: " + ex.Message);
+				}
 			}
 		}
 	}

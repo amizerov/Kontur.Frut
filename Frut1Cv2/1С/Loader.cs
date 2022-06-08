@@ -81,7 +81,7 @@ namespace Frut1Cv2
 						LoadTovars(tov, m.ID, 0);
 					}
 				}
-				catch (Exception ex) { OnError?.Invoke("Машина 1 ошибка: " + ex.ToString()); }
+				catch (Exception ex) { OnError?.Invoke("LoadMashin ошибка: " + ex.ToString()); }
 			}
 		}
 
